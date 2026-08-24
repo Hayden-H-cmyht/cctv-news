@@ -1,0 +1,65 @@
+name: Fetch & Deploy
+
+on:
+  schedule:
+    - cron: "30 13 * * *"   # UTC 13:30 = 北京时间 21:30（联播文字版约20:30发布后）
+  workflow_dispatch:         # 支持手动触发补抓
+    inputs:
+      from_date:
+        description: "补抓开始日期 (YYYY-MM-DD，留空则自动补齐近30天)"
+        required: false
+        default: ""
+      to_date:
+        description: "补抓结束日期 (YYYY-MM-DD)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: fetch-and-deploy
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch CCTV news
+        run: |
+          python cctv_news.py --site \
+            --from "${{ github.event.inputs.from_date || '' }}" \
+            --to "${{ github.event.inputs.to_date || '' }}"
+
+      - name: Commit new data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data
+          if git diff --cached --quiet; then
+            echo "No new data to commit."
+          else
+            git commit -m "data: update $(date -u +%F)"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
