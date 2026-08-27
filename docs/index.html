@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#a01212">
-<meta name="description" content="央视《新闻联播》每日摘要：要点归纳、分类浏览、往期回看，每天自动更新。">
-<title>新闻联播 · 每日摘要</title>
+<meta name="description" content="央视《新闻联播》+ 央视财经《经济信息联播》每日摘要：要点归纳、分类浏览、往期归类回看，每天自动更新。">
+<title>央视新闻 · 每日摘要（新闻联播 + 央视财经）</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23a01212'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'%3E闻%3C/text%3E%3C/svg%3E">
 </head>
@@ -15,8 +15,8 @@
     <div class="brand">
       <span class="logo">闻</span>
       <div>
-        <h1>新闻联播 · 每日摘要</h1>
-        <p class="sub">央视网官方文字版 · 自动抓取归纳</p>
+        <h1>央视新闻 · 每日摘要</h1>
+        <p class="sub">新闻联播 + 央视财经 · 自动抓取归纳</p>
       </div>
     </div>
     <div class="day-meta" id="dayMeta">加载中…</div>
@@ -36,27 +36,45 @@
   </div>
 </nav>
 
+<nav class="view-switch" id="viewSwitch" aria-label="视图切换">
+  <button class="vbtn active" data-view="daily">每日速览</button>
+  <button class="vbtn" data-view="archive">往期归类</button>
+</nav>
+
 <div class="toolbar" id="toolbar" hidden>
   <div class="search-box">
     <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
     <input type="search" id="searchInput" placeholder="搜索当日新闻…" autocomplete="off">
   </div>
+  <div class="src-tabs" id="srcTabs"></div>
   <div class="cat-chips" id="catChips"></div>
 </div>
 
 <main id="main">
   <section class="card highlights" id="highlights" hidden>
-    <h2>⚡ 今日要点</h2>
+    <h2 id="hlTitle">⚡ 今日要点</h2>
     <ol id="hlList"></ol>
   </section>
 
   <section class="news-list" id="newsList"></section>
 
+  <section class="card archive" id="archiveView" hidden>
+    <div class="arch-head">
+      <h2>📂 往期归类</h2>
+      <div class="arch-stats" id="archStats">加载中…</div>
+    </div>
+    <div class="arch-filters">
+      <div class="src-tabs" id="archSrcTabs"></div>
+      <div class="cat-chips" id="archCatChips"></div>
+    </div>
+    <div class="arch-list" id="archList"></div>
+  </section>
+
   <div class="state-msg" id="stateMsg"></div>
 </main>
 
 <footer>
-  <p>数据来源：<a href="https://tv.cctv.com/lm/xwlb/" target="_blank" rel="noopener">央视网《新闻联播》文字版</a></p>
+  <p>数据来源：<a href="https://tv.cctv.com/lm/xwlb/" target="_blank" rel="noopener">央视网《新闻联播》</a> · <a href="https://tv.cctv.com/lm/jjxxll/" target="_blank" rel="noopener">央视财经《经济信息联播》</a></p>
   <p>GitHub Actions 每天 21:30 自动抓取更新 ｜ 本地规则归纳，无 AI 参与</p>
 </footer>
 

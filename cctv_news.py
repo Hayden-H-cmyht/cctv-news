@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-央视《新闻联播》抓取 + 归纳 + 网站数据生成
+央视《新闻联播》+《经济信息联播》抓取 + 归纳 + 网站数据生成
 
-数据来源：央视网 tv.cctv.com《新闻联播》文字版（官方公开页面，服务端渲染）
+数据来源：
+  - 新闻联播：央视网 tv.cctv.com 文字版（服务端渲染，逐条全文）
+  - 经济信息联播（央视财经 CCTV-2）：CNTV 官方接口（标题 + 官方一句话简介，无全文）
 归纳方式：本地规则（关键词分类 + 首句摘要），不调用任何大模型
 
 本地用法：
@@ -110,6 +112,50 @@ def fetch_full_day(day: date) -> list:
     return items
 
 
+# ---------------------------------------------------------------- 抓取央视财经《经济信息联播》
+
+JJXXLL_API = ("https://api.cntv.cn/NewVideo/getVideoListByColumn"
+              "?id=TOPC1451533782742171&n=100&sort=desc&p=1"
+              "&bd={ymd}&mode=2&serviceId=tvcctv")
+
+
+def fetch_jjxxll_day(day: date) -> dict:
+    """抓某天《经济信息联播》（CCTV-2 财经频道旗舰新闻栏目，CNTV 官方接口）。
+
+    接口一次返回全天列表；单条只有官方一句话简介（brief），没有全文文字稿。
+    整期完整版那条的 brief 是官方"本期节目主要内容"提要，单独取出做要点。
+    返回 {"items": [...], "digest": "官方提要原文（可能为空）"}。
+    """
+    raw = http_get(JJXXLL_API.format(ymd=f"{day:%Y%m%d}"))
+    items, digest = [], ""
+    for it in json.loads(raw).get("data", {}).get("list", []):
+        title = re.sub(r"\s+", " ", it.get("title") or "").strip()
+        brief = re.sub(r"\s+", " ", it.get("brief") or "").strip()
+        url = (it.get("url") or "").strip()
+        if title.startswith("《经济信息联播》"):  # 整期完整版：官方提要
+            digest = brief
+            continue
+        if not title.startswith("[经济信息联播]"):
+            continue
+        title = title.split("]", 1)[1].strip()
+        if not title:
+            continue
+        items.append({"title": title, "url": url, "text": "",
+                      "gist": brief.rstrip("。"), "length": it.get("length") or ""})
+    for it in items:
+        it["category"] = categorize(it["title"], it["gist"], CATEGORY_RULES_FINANCE)
+    return {"items": items, "digest": digest}
+
+
+def jjxxll_highlights(digest: str) -> list:
+    """把官方"本期节目主要内容"按分号拆成要点列表"""
+    text = re.sub(r"^本期节目主要内容[:：]?", "", digest).strip()
+    parts = [p.strip(" ，。；;、") for p in re.split(r"[；;]", text)]
+    parts = [p for p in parts if len(p) >= 4]
+    return ([{"title": p, "gist": ""} for p in parts]
+            or ([{"title": digest, "gist": ""}] if digest else []))
+
+
 # ---------------------------------------------------------------- 本地归纳
 
 CATEGORY_RULES = [
@@ -134,14 +180,26 @@ CATEGORY_RULES = [
 
 CATEGORY_ORDER = list(dict.fromkeys([c for c, _ in CATEGORY_RULES])) + ["其他"]
 
+# 财经版分类：金融市场类优先（该节目大量行情/宏观内容），其余复用联播规则
+CATEGORY_RULES_FINANCE = [
+    ("金融市场", ["A股", "B股", "港股", "美股", "欧股", "沪指", "深成指", "创业板", "科创板",
+                "股市", "债市", "收盘", "开盘", "成交", "油价", "金价", "黄金", "原油",
+                "汇率", "人民币", "美元指数", "欧元", "日元", "期货", "基金", "券商",
+                "利率", "降息", "降准", "加息", "存款", "贷款", "GDP", "CPI", "PPI",
+                "PMI", "财政", "关税", "市值", "指数"]),
+] + CATEGORY_RULES
 
-def categorize(title: str, text: str) -> str:
+CATEGORY_ORDER_FINANCE = ["金融市场"] + CATEGORY_ORDER
+
+
+def categorize(title: str, text: str, rules=None) -> str:
     """按关键词优先级给新闻分类（标题命中的权重高于正文）"""
+    rules = rules or CATEGORY_RULES
     sample = text[:300]
-    for name, words in CATEGORY_RULES:
+    for name, words in rules:
         if any(w in title for w in words):
             return name
-    for name, words in CATEGORY_RULES:
+    for name, words in rules:
         if any(w in sample for w in words):
             return name
     return "其他"
@@ -172,19 +230,17 @@ def local_highlights(items) -> list:
 
 # ---------------------------------------------------------------- 网站数据导出
 
-def write_site_json(day: date, items) -> str:
-    """把一天的数据写成 docs/data/YYYY-MM-DD.json（前端读这个）"""
+def build_source_payload(name: str, items, highlights, cat_order) -> dict:
+    """单来源的标准数据结构（联播/财经共用）"""
     by_cat = group_by_category(items)
-    data = {
-        "date": f"{day:%Y-%m-%d}",
-        "weekday": "一二三四五六日"[day.weekday()],
-        "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    return {
+        "name": name,
         "count": len(items),
-        "highlights": local_highlights(items),
+        "highlights": highlights,
         "categories": {
             cat: [{"title": it["title"], "url": it["url"], "gist": it["gist"]}
                   for it in by_cat.get(cat, [])]
-            for cat in CATEGORY_ORDER if by_cat.get(cat)
+            for cat in cat_order if by_cat.get(cat)
         },
         "items": [
             {"title": it["title"], "url": it["url"], "category": it["category"],
@@ -192,6 +248,45 @@ def write_site_json(day: date, items) -> str:
             for it in items
         ],
     }
+
+
+def jjxxll_payload(jj: dict) -> dict:
+    return build_source_payload(
+        "经济信息联播", jj["items"],
+        jjxxll_highlights(jj["digest"]) or local_highlights(jj["items"]),
+        CATEGORY_ORDER_FINANCE)
+
+
+def load_day_json(day: date):
+    """读已存在的日 JSON；损坏/不存在返回 None"""
+    path = os.path.join(SITE_DATA_DIR, f"{day:%Y-%m-%d}.json")
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
+def write_site_json(day: date, xwlb: dict, jjxxll) -> str:
+    """把一天双源数据写成 docs/data/YYYY-MM-DD.json。
+
+    新结构在 sources 下分源存放；顶层保留旧单源字段（联播，不含正文，
+    省体积）兼容旧前端。jjxxll 为 None 表示当天财经未取到。
+    """
+    data = {
+        "date": f"{day:%Y-%m-%d}",
+        "weekday": "一二三四五六日"[day.weekday()],
+        "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "count": xwlb["count"] + (jjxxll["count"] if jjxxll else 0),
+        "highlights": xwlb["highlights"],
+        "categories": xwlb["categories"],
+        "items": [{k: v for k, v in it.items() if k != "text"} for it in xwlb["items"]],
+        "sources": {"xwlb": xwlb},
+    }
+    if jjxxll is not None:
+        data["sources"]["jjxxll"] = jjxxll
     os.makedirs(SITE_DATA_DIR, exist_ok=True)
     path = os.path.join(SITE_DATA_DIR, f"{day:%Y-%m-%d}.json")
     with open(path, "w", encoding="utf-8") as f:
@@ -199,14 +294,80 @@ def write_site_json(day: date, items) -> str:
     return path
 
 
+SOURCE_META = {
+    "xwlb": "新闻联播",
+    "jjxxll": "央视财经 · 经济信息联播",
+}
+
+
+def generate_archive():
+    """扫描 docs/data/ 生成 archive.json（往期归类视图用）。
+
+    把全部日期的新闻按"日期 + 来源 + 分类"聚合为一条扁平列表，
+    前端"往期归类"界面据此按分类浏览所有历史条目。
+    """
+    items = []
+    for p in sorted(os.listdir(SITE_DATA_DIR)):
+        m = re.match(r"(\d{4}-\d{2}-\d{2})\.json$", p)
+        if not m:
+            continue
+        d = m.group(1)
+        try:
+            with open(os.path.join(SITE_DATA_DIR, p), encoding="utf-8") as f:
+                day = json.load(f)
+        except Exception:
+            continue
+        if "sources" in day:  # 双源/多源格式
+            for key, src in day["sources"].items():
+                if key not in SOURCE_META:
+                    continue
+                for it in src.get("items", []):
+                    items.append({"date": d, "source": key,
+                                  "category": it.get("category", "其他"),
+                                  "title": it.get("title", ""),
+                                  "url": it.get("url", ""),
+                                  "gist": it.get("gist", "")})
+        else:  # 旧单源格式 → 视作新闻联播
+            for it in day.get("items", []):
+                items.append({"date": d, "source": "xwlb",
+                              "category": it.get("category", "其他"),
+                              "title": it.get("title", ""),
+                              "url": it.get("url", ""),
+                              "gist": it.get("gist", "")})
+    archive = {
+        "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "sources": SOURCE_META,
+        "items": items,
+    }
+    path = os.path.join(SITE_DATA_DIR, "archive.json")
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(archive, f, ensure_ascii=False, indent=1)
+    return path
+
+
 def update_site_index():
-    """扫描 docs/data/ 生成 index.json（前端据此列日期）"""
-    dates = sorted(
-        m.group(1) for p in os.listdir(SITE_DATA_DIR)
-        if (m := re.match(r"(\d{4}-\d{2}-\d{2})\.json$", p))
-    )
+    """扫描 docs/data/ 生成 index.json（日期列表 + 每天分源条数，存档页统计用）"""
+    dates, days = [], {}
+    for p in sorted(os.listdir(SITE_DATA_DIR)):
+        m = re.match(r"(\d{4}-\d{2}-\d{2})\.json$", p)
+        if not m:
+            continue
+        d = m.group(1)
+        dates.append(d)
+        stats = {}
+        try:
+            with open(os.path.join(SITE_DATA_DIR, p), encoding="utf-8") as f:
+                day = json.load(f)
+            if "sources" in day:
+                for key, src in day["sources"].items():
+                    stats[key] = src.get("count", len(src.get("items", [])))
+            else:  # 旧单源格式
+                stats["xwlb"] = day.get("count", len(day.get("items", [])))
+        except Exception:
+            pass
+        days[d] = stats
     index = {"updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-             "dates": dates}
+             "dates": dates, "days": days}
     path = os.path.join(SITE_DATA_DIR, "index.json")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, indent=1)
@@ -214,7 +375,7 @@ def update_site_index():
 
 
 def site_update(days_back: int = 30, from_day=None, to_day=None) -> list:
-    """网站模式主流程：抓今天+补近N天（或指定区间），返回成功写入的日期"""
+    """网站模式主流程：逐天补齐（缺联播补联播、缺财经补财经），返回本次写入的日期"""
     today = date.today()
     if from_day and to_day:
         d, targets = from_day, []
@@ -226,24 +387,58 @@ def site_update(days_back: int = 30, from_day=None, to_day=None) -> list:
 
     done = []
     for d in targets:
-        json_path = os.path.join(SITE_DATA_DIR, f"{d:%Y-%m-%d}.json")
-        if os.path.exists(json_path):
-            continue  # 已有数据就跳过（补齐式抓取）
-        try:
-            items = fetch_full_day(d)
-        except Exception as e:
-            print(f"[skip] {d:%Y-%m-%d} 抓取失败：{e}")
+        existing = load_day_json(d)
+        xwlb = jjxxll = None
+        if existing:
+            if "sources" in existing:
+                xwlb = existing["sources"].get("xwlb")
+                jjxxll = existing["sources"].get("jjxxll")
+            else:  # 旧单源格式 → 视作联播，顺带补财经
+                xwlb = {"name": "新闻联播", "count": existing.get("count", 0),
+                        "highlights": existing.get("highlights", []),
+                        "categories": existing.get("categories", {}),
+                        "items": existing.get("items", [])}
+
+        if xwlb is None:
+            try:
+                items = fetch_full_day(d)
+            except Exception as e:
+                print(f"[skip] {d:%Y-%m-%d} 联播抓取失败：{e}")
+                continue
+            if not items and d == today:
+                continue  # 今天还没发布，下次再说
+            if not items:
+                print(f"[skip] {d:%Y-%m-%d} 联播无条目（可能是当天未发布或页面缺失）")
+                continue
+            xwlb = build_source_payload("新闻联播", items, local_highlights(items),
+                                        CATEGORY_ORDER)
+
+        if jjxxll is None:
+            try:
+                jj = fetch_jjxxll_day(d)
+            except Exception as e:
+                print(f"[warn] {d:%Y-%m-%d} 财经抓取失败：{e}")
+            else:
+                if jj["items"]:
+                    jjxxll = jjxxll_payload(jj)
+                elif d != today:
+                    # 过去日期没数据也落盘成空源（避免每次重试）；今天留给下次
+                    jjxxll = build_source_payload("经济信息联播", [], [],
+                                                  CATEGORY_ORDER_FINANCE)
+
+        # 已存在的文件本身就双源齐全 → 无需重写
+        # （注意：旧单源文件补抓到财经后不能走这个分支，否则永远不会落盘）
+        if (existing and "sources" in existing
+                and xwlb is not None and jjxxll is not None):
             continue
-        if not items and d == today:
-            continue  # 今天还没发布，下次再说
-        if not items:
-            print(f"[skip] {d:%Y-%m-%d} 无条目（可能是当天未发布或页面缺失）")
-            continue
-        write_site_json(d, items)
+
+        write_site_json(d, xwlb, jjxxll)
         done.append(f"{d:%Y-%m-%d}")
-        print(f"[ok] {d:%Y-%m-%d} {len(items)}条 已写入")
+        print(f"[ok] {d:%Y-%m-%d} 联播{xwlb['count']}条"
+              + (f" ｜ 财经{jjxxll['count']}条" if jjxxll else "") + " 已写入")
     update_site_index()
-    print(f"[done] 本次新增 {len(done)} 天，库中共 "
+    generate_archive()
+    print(f"[done] 本次更新 {len(done)} 天，库中共 "
           f"{len(json.load(open(os.path.join(SITE_DATA_DIR, 'index.json'), encoding='utf-8'))['dates'])} 天")
     return done
 
@@ -251,32 +446,34 @@ def site_update(days_back: int = 30, from_day=None, to_day=None) -> list:
 # ---------------------------------------------------------------- 本地 md/html 输出
 #（本地命令行模式用；网站模式不生成这两样，减少仓库体积）
 
-def render_markdown(day: date, items, summary_md: str, by_cat: dict) -> str:
+def render_markdown(day: date, sections: list) -> str:
+    """sections: [{"name", "items", "by_cat", "hl_md", "cat_order"}]"""
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    total = sum(len(s["items"]) for s in sections)
     lines = [
-        f"# 《新闻联播》摘要 · {day:%Y-%m-%d}",
+        f"# 央视新闻摘要 · {day:%Y-%m-%d}",
         "",
-        f"> 抓取时间 {now} ｜ 共 {len(items)} 条 ｜ 本地规则归纳",
-        "",
-        "## 今日要点",
-        "",
-        summary_md,
-        "",
-        "## 分类明细",
+        f"> 抓取时间 {now} ｜ 共 {total} 条 ｜ 本地规则归纳",
         "",
     ]
-    for cat in CATEGORY_ORDER:
-        if cat not in by_cat:
-            continue
-        lines.append(f"### {cat}（{len(by_cat[cat])}条）")
+    for i, s in enumerate(sections, 1):
+        lines.append(f"## {i}、{s['name']}（{len(s['items'])}条）")
         lines.append("")
-        for it in by_cat[cat]:
-            gist_part = f"：{it['gist']}" if it["gist"] else ""
-            lines.append(f"- **[{it['title']}]({it['url']})**{gist_part}")
-        lines.append("")
+        if s["hl_md"]:
+            lines += ["### 今日要点", "", s["hl_md"], ""]
+        lines += ["### 分类明细", ""]
+        for cat in s["cat_order"]:
+            if cat not in s["by_cat"]:
+                continue
+            lines.append(f"#### {cat}（{len(s['by_cat'][cat])}条）")
+            lines.append("")
+            for it in s["by_cat"][cat]:
+                gist_part = f"：{it['gist']}" if it["gist"] else ""
+                lines.append(f"- **[{it['title']}]({it['url']})**{gist_part}")
+            lines.append("")
     lines += [
         "---",
-        "*数据来源：央视网 tv.cctv.com《新闻联播》文字版*",
+        "*数据来源：央视网 tv.cctv.com《新闻联播》文字版 / 央视财经《经济信息联播》*",
         "",
     ]
     return "\n".join(lines)
@@ -297,13 +494,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>新闻联播摘要 {title_day}</title>
+<title>央视新闻摘要 {title_day}</title>
 <style>
   body {{ font-family: "Microsoft YaHei", system-ui, sans-serif; max-width: 46em;
          margin: 2em auto; padding: 0 1.2em; line-height: 1.7; color: #222; }}
   h1 {{ font-size: 1.6em; border-bottom: 2px solid #c00; padding-bottom: .3em; }}
   h2 {{ font-size: 1.25em; margin-top: 1.6em; color: #a00; }}
   h3 {{ font-size: 1.05em; margin-bottom: .3em; }}
+  h4 {{ font-size: 1em; margin: 1em 0 .2em; color: #333; }}
   .meta {{ color: #666; font-size: .9em; }}
   a {{ color: #06c; text-decoration: none; }}
   a:hover {{ text-decoration: underline; }}
@@ -337,7 +535,9 @@ def md_to_html(md: str, day: date) -> str:
                 out.append("</ul>")
                 in_list = False
             continue
-        if ln.startswith("### "):
+        if ln.startswith("#### "):
+            out.append(f"<h4>{_inline_md(ln[5:])}</h4>")
+        elif ln.startswith("### "):
             out.append(f"<h3>{_inline_md(ln[4:])}</h3>")
         elif ln.startswith("## "):
             out.append(f"<h2>{_inline_md(ln[3:])}</h2>")
@@ -427,7 +627,9 @@ def main():
     ) if hl else ""
 
     os.makedirs(DATA_DIR, exist_ok=True)
-    md = render_markdown(actual_day, items, summary_md, by_cat)
+    sections = [{"name": "新闻联播", "items": items, "by_cat": by_cat,
+                 "hl_md": summary_md, "cat_order": CATEGORY_ORDER}]
+    md = render_markdown(actual_day, sections)
     out_path = os.path.join(DATA_DIR, f"{actual_day:%Y-%m-%d}.md")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(md)

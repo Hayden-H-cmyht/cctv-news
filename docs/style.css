@@ -73,7 +73,19 @@ button { font-family: inherit; cursor: pointer; }
 .refresh-btn.spinning svg { animation: spin .8s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ===== 工具栏：搜索 + 分类 ===== */
+/* ===== 视图切换 ===== */
+.view-switch {
+  max-width: 860px; margin: 14px auto 0; padding: 0 12px;
+  display: flex; gap: 8px;
+}
+.vbtn {
+  border: 1px solid var(--line); background: var(--card); color: #555;
+  border-radius: 20px; padding: 7px 18px; font-size: 14px; transition: all .15s;
+}
+.vbtn:hover { border-color: var(--red); color: var(--red); }
+.vbtn.active { background: #2b2f36; border-color: #2b2f36; color: #fff; font-weight: 600; }
+
+/* ===== 工具栏：搜索 + 来源 + 分类 ===== */
 main { max-width: 860px; margin: 0 auto; padding: 10px 12px 30px; }
 .toolbar { margin: 12px 2px 4px; display: flex; flex-direction: column; gap: 10px; }
 .search-box {
@@ -86,6 +98,14 @@ main { max-width: 860px; margin: 0 auto; padding: 10px 12px 30px; }
   flex: 1; border: none; outline: none; background: transparent;
   font-size: 14px; color: var(--text);
 }
+.src-tabs { display: flex; gap: 7px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+.src-tabs::-webkit-scrollbar { display: none; }
+.stab {
+  flex: none; border-radius: 16px; padding: 5px 14px; font-size: 13.5px; font-weight: 600;
+  background: var(--card); border: 1px solid var(--line); color: #555;
+}
+.stab.active { background: var(--red); border-color: var(--red); color: #fff; }
+.stab .n { opacity: .7; font-size: 12px; margin-left: 2px; font-weight: 400; }
 .cat-chips { display: flex; gap: 7px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
 .cat-chips::-webkit-scrollbar { display: none; }
 .cat {
@@ -104,6 +124,10 @@ main { max-width: 860px; margin: 0 auto; padding: 10px 12px 30px; }
 .highlights ol { padding-left: 20px; }
 .highlights li { margin: 9px 0; font-size: 14.5px; }
 .highlights li .gist { color: #555; }
+.hl-src {
+  display: inline-block; margin-left: 6px; font-size: 11px; color: #fff;
+  background: var(--red); border-radius: 9px; padding: 1px 8px; vertical-align: 1px;
+}
 
 /* 新闻列表 */
 .news-list { margin-top: 6px; }
@@ -120,6 +144,8 @@ main { max-width: 860px; margin: 0 auto; padding: 10px 12px 30px; }
   font-size: 11.5px; padding: 2px 9px; border-radius: 10px;
   color: #fff; background: var(--cat-color, #888); letter-spacing: 1px;
 }
+.src-badge.xwlb   { background: var(--red); letter-spacing: 0; }
+.src-badge.jjxxll { background: #9a6a00; letter-spacing: 0; }
 .news-item h3 { font-size: 15.5px; font-weight: 600; line-height: 1.5; }
 .news-item .gist { font-size: 13.5px; color: #666; }
 .news-item .src { font-size: 12.5px; color: var(--muted); }
@@ -130,9 +156,43 @@ main { max-width: 860px; margin: 0 auto; padding: 10px 12px 30px; }
 .cat-国际新闻 { --cat-color: #1660c0; }
 .cat-军事国防 { --cat-color: #3d6b35; }
 .cat-经济财经 { --cat-color: #b0730d; }
+.cat-金融市场 { --cat-color: #b0730d; }
 .cat-科技教育 { --cat-color: #7a3fc4; }
 .cat-社会民生 { --cat-color: #0d8f82; }
 .cat-其他     { --cat-color: #8a8f98; }
+
+/* ===== 往期归类 ===== */
+.archive { margin-top: 14px; }
+.arch-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.arch-head h2 { font-size: 16px; color: var(--red-dark); }
+.arch-stats { font-size: 13px; color: var(--muted); line-height: 1.7; text-align: right; }
+.arch-stats b { color: var(--text); font-size: 15px; }
+.arch-filters { display: flex; flex-direction: column; gap: 9px; margin: 14px 0 4px; }
+.arch-day { margin-top: 16px; }
+.arch-day-head {
+  font-size: 13.5px; font-weight: 600; color: var(--text);
+  display: flex; align-items: baseline; gap: 6px;
+  border-bottom: 1px solid var(--line); padding-bottom: 6px;
+}
+.arch-day-head .wd { color: var(--muted); font-weight: 400; font-size: 12px; }
+.arch-day-head .n { margin-left: auto; color: var(--muted); font-weight: 400; font-size: 12px; }
+.arch-items { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 8px; }
+.arch-item {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 10px 14px 9px 12px; border-left: 4px solid var(--cat-color, #bbb);
+  display: flex; flex-direction: column; gap: 4px;
+}
+.arch-item .top { display: flex; gap: 6px; flex-wrap: wrap; }
+.arch-item h3 { font-size: 14.5px; font-weight: 600; line-height: 1.5; }
+.arch-item h3 a { color: var(--text); }
+.arch-item h3 a:hover { color: var(--red); text-decoration: underline; }
+.arch-item .gist { font-size: 13px; color: #666; }
+.arch-item .badge { font-size: 11px; padding: 1px 8px; border-radius: 9px; letter-spacing: .5px; }
+.empty { text-align: center; color: var(--muted); padding: 34px 10px; font-size: 14px; }
+
+@media (min-width: 640px) {
+  .arch-items { grid-template-columns: 1fr 1fr; }
+}
 
 /* ===== 状态 ===== */
 .state-msg { text-align: center; color: var(--muted); padding: 46px 10px; font-size: 14px; }
@@ -178,10 +238,13 @@ footer {
     --bg: #17181c; --card: #212329; --text: #e8e6e1; --muted: #9a9fa8; --line: #32353d;
     --shadow: 0 1px 3px rgba(0, 0, 0, .3), 0 6px 18px rgba(0, 0, 0, .25);
   }
-  .dchip, .history-btn, .refresh-btn, .search-box, .cat { background: var(--card); color: #cfd3da; }
-  .cat.active { background: #e8e6e1; color: #1b1c20; border-color: #e8e6e1; }
-  .news-item .gist { color: #a8adb6; }
-  .refresh-btn:hover, .dchip:hover { color: #ff8f8f; border-color: #ff8f8f; }
+  .dchip, .history-btn, .refresh-btn, .search-box, .cat, .stab, .vbtn { background: var(--card); color: #cfd3da; }
+  .cat.active, .vbtn.active { background: #e8e6e1; color: #1b1c20; border-color: #e8e6e1; }
+  .stab.active { background: var(--red); border-color: var(--red); color: #fff; }
+  .news-item .gist, .arch-item .gist { color: #a8adb6; }
+  .arch-item { background: var(--card); border-color: var(--line); }
+  .arch-item h3 a { color: #e8e6e1; }
+  .refresh-btn:hover, .dchip:hover, .vbtn:hover, .stab:hover { color: #ff8f8f; border-color: #ff8f8f; }
   .dchip.active { background: var(--red); border-color: var(--red); color: #fff; }
   .skeleton::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,.05), transparent); }
 }
