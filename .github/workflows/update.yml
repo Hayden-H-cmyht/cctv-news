@@ -1,6 +1,8 @@
 name: Fetch & Deploy
 
 on:
+  push:
+    branches: [ main ]        # 推送到 main 即部署（手机可随时访问）
   schedule:
     - cron: "30 13 * * *"   # UTC 13:30 = 北京时间 21:30（联播文字版约20:30发布后）
   workflow_dispatch:         # 支持手动触发补抓
