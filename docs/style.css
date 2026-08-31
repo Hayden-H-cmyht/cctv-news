@@ -1,5 +1,6 @@
 /* ===== 基础 ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
 :root {
   --red: #a01212;
   --red-dark: #7d0d0d;
@@ -194,6 +195,77 @@ main { max-width: 860px; margin: 0 auto; padding: 10px 12px 30px; }
   .arch-items { grid-template-columns: 1fr 1fr; }
 }
 
+/* ===== 昨日/今日对比 ===== */
+.compare { margin-top: 14px; }
+.cmp-head h2 { font-size: 16px; color: var(--red-dark); }
+.cmp-hint { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.cmp-strip { display: flex; gap: 6px; overflow-x: auto; padding: 10px 2px 4px; scrollbar-width: none; }
+.cmp-strip::-webkit-scrollbar { display: none; }
+.cmp-cards-row { display: flex; align-items: stretch; gap: 8px; margin: 14px 0 4px; }
+.cmp-card {
+  flex: 1; min-width: 0; background: var(--card);
+  border: 1px solid var(--line); border-radius: 12px; padding: 12px 12px; text-align: center;
+}
+.cmp-card .cmp-date { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.cmp-card .cmp-date .wd { margin-left: 3px; }
+.cmp-num { font-size: 30px; font-weight: 700; color: var(--text); line-height: 1.2; margin: 5px 0 2px; }
+.cmp-num .u { font-size: 12.5px; color: var(--muted); font-weight: 400; margin-left: 3px; }
+.cmp-sub { font-size: 11.5px; color: var(--muted); }
+.cmp-vs {
+  flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-size: 11px; color: var(--muted); gap: 3px; padding: 0 2px;
+}
+.cmp-vs > span { font-size: 15px; font-weight: 700; }
+.cmp-vs .up { color: #b31313; }
+.cmp-vs .down { color: #1660c0; }
+.cmp-vs .flat { color: var(--muted); }
+.cmp-block { margin-top: 18px; }
+.cmp-block h3 {
+  font-size: 15px; color: var(--red-dark); margin-bottom: 4px;
+  border-bottom: 1px solid var(--line); padding-bottom: 7px;
+}
+.cmp-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 8px; }
+.cmp-table th, .cmp-table td { padding: 7px 8px; text-align: center; border-bottom: 1px solid var(--line); }
+.cmp-table th { color: var(--muted); font-weight: 500; font-size: 12.5px; }
+.cmp-table td:first-child { text-align: left; font-weight: 600; }
+.cmp-table .up { color: #b31313; font-weight: 700; }
+.cmp-table .down { color: #1660c0; font-weight: 700; }
+.cmp-table .flat { color: var(--muted); }
+.cmp-cat-row { margin: 12px 0; }
+.cmp-cat-name { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.cmp-cat-delta { font-size: 12px; font-weight: 700; margin-left: 7px; }
+.cmp-cat-delta.up { color: #b31313; }
+.cmp-cat-delta.down { color: #1660c0; }
+.cmp-cat-delta.flat { color: var(--muted); }
+.cmp-bar-row { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
+.cmp-bar-label { font-size: 11.5px; color: var(--muted); width: 18px; text-align: right; flex: none; }
+.cmp-bar { flex: 1; height: 12px; background: #ececea; border-radius: 6px; overflow: hidden; }
+.cmp-bar i { display: block; height: 100%; border-radius: 6px; min-width: 0; transition: width .4s ease; }
+.cmp-bar .b-old { background: #c9ccd2; }
+.cmp-bar .b-new { background: var(--red); }
+.cmp-bar-n { font-size: 12px; color: var(--muted); width: 26px; text-align: left; flex: none; }
+.cmp-topics-col { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
+.cmp-topic { border: 1px solid var(--line); border-radius: 12px; padding: 11px 13px; }
+.cmp-topic-head { font-size: 13.5px; font-weight: 600; margin-bottom: 9px; display: flex; align-items: center; gap: 6px; }
+.cmp-topic-head.new { color: #b31313; }
+.cmp-topic-head.gone { color: #1660c0; }
+.cmp-topic-head .n {
+  background: var(--line); border-radius: 10px; padding: 0 8px; font-size: 12px;
+  color: var(--muted); font-weight: 400;
+}
+.cmp-topic ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.cmp-topic li { font-size: 13.5px; line-height: 1.5; display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.cmp-topic li .badge { font-size: 10.5px; padding: 1px 7px; }
+.cmp-topic li a { color: var(--text); }
+.cmp-topic li a:hover { color: var(--red); text-decoration: underline; }
+.cmp-more { font-size: 12px; color: var(--muted); margin-top: 9px; }
+.empty-s { color: var(--muted); font-size: 13px; }
+
+@media (min-width: 640px) {
+  .cmp-topics-col { flex-direction: row; }
+  .cmp-topic { flex: 1; }
+}
+
 /* ===== 状态 ===== */
 .state-msg { text-align: center; color: var(--muted); padding: 46px 10px; font-size: 14px; }
 .state-msg.error { color: #b31313; }
@@ -247,4 +319,8 @@ footer {
   .refresh-btn:hover, .dchip:hover, .vbtn:hover, .stab:hover { color: #ff8f8f; border-color: #ff8f8f; }
   .dchip.active { background: var(--red); border-color: var(--red); color: #fff; }
   .skeleton::after { background: linear-gradient(90deg, transparent, rgba(255,255,255,.05), transparent); }
+  .cmp-bar { background: #33363e; }
+  .cmp-bar .b-old { background: #4a4e57; }
+  .cmp-topic, .cmp-card { border-color: var(--line); }
+  .cmp-topic li a { color: #e8e6e1; }
 }

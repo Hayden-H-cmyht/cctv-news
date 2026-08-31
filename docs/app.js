@@ -6,10 +6,11 @@
 const $ = (id) => document.getElementById(id);
 const state = {
   dates: [], current: null, data: null,
-  view: "daily",                    // daily | archive
+  view: "daily",                    // daily | archive | compare
   src: "全部",                      // 每日视图来源：全部 | xwlb | jjxxll
   cat: "全部", q: "",
   arch: { data: null, src: "全部", cat: "全部" },
+  cmp: { date: null, prev: null, data: null, prevData: null },
 };
 
 const SRC_ORDER = ["xwlb", "jjxxll"];
@@ -284,17 +285,181 @@ function renderArchList() {
     </div>`).join("");
 }
 
+/* ---------- 昨日/今日对比 ---------- */
+
+async function loadCompare(date) {
+  const dates = state.dates;
+  if (dates.length < 2) {
+    showState("数据不足：至少需要两天的数据才能对比。");
+    return;
+  }
+  const idx = dates.indexOf(date);
+  if (idx < 1) {
+    showState("这是最早的一天，没有前一天可对比。请选择其他日期。");
+    return;
+  }
+  const prev = dates[idx - 1];
+  state.cmp.date = date;
+  state.cmp.prev = prev;
+  renderCmpStrip();
+  $("cmpCards").innerHTML = '<div class="empty">加载中…</div>';
+  try {
+    const [d, p] = await Promise.all([
+      fetchJSON(`data/${date}.json`),
+      fetchJSON(`data/${prev}.json`),
+    ]);
+    state.cmp.data = d;
+    state.cmp.prevData = p;
+    renderCompare();
+  } catch (e) {
+    showState(`对比加载失败：${e.message}`, true);
+  }
+}
+
+function renderCmpStrip() {
+  const strip = $("cmpStrip");
+  strip.innerHTML = "";
+  for (const d of state.dates) {
+    const b = document.createElement("button");
+    b.className = "dchip" + (d === state.cmp.date ? " active" : "");
+    const dd = d.slice(5).replace("-", "/");
+    b.innerHTML = `${dd}<span class="wd">${weekdayOf(d)}</span>`;
+    b.onclick = () => loadCompare(d);
+    strip.appendChild(b);
+  }
+  strip.scrollLeft = strip.scrollWidth;
+}
+
+function cmpSrcCount(day, src) {
+  if (!day) return 0;
+  if (src === "全部") return day.count || (day.items ? day.items.length : 0);
+  const s = day.sources && day.sources[src];
+  return s ? (s.count != null ? s.count : (s.items ? s.items.length : 0)) : 0;
+}
+
+function cmpDayItems(day) {
+  const out = [];
+  if (!day || !day.sources) return out;
+  for (const k of SRC_ORDER) {
+    const arr = day.sources[k] && day.sources[k].items;
+    if (arr) for (const it of arr) out.push(Object.assign({}, it, { source: k }));
+  }
+  return out;
+}
+
+function renderCompare() {
+  const c = state.cmp;
+  if (!c.data || !c.prevData) return;
+  hideState();
+  $("cmpCards").innerHTML = cmpCardsHtml(c.data, c.prevData);
+  $("cmpSource").innerHTML = cmpSourceHtml(c.data, c.prevData);
+  $("cmpCats").innerHTML = cmpCatsHtml(c.data, c.prevData);
+  $("cmpTopics").innerHTML = cmpTopicsHtml(c.data, c.prevData);
+}
+
+function cmpCardsHtml(d, p) {
+  const ta = cmpSrcCount(d, "全部"), tb = cmpSrcCount(p, "全部");
+  const delta = ta - tb;
+  const dCls = delta > 0 ? "up" : delta < 0 ? "down" : "flat";
+  const dTxt = delta > 0 ? `+${delta}` : delta < 0 ? `${delta}` : "持平";
+  const sub = (day) => SRC_ORDER.map((k) => `${SRC_LABEL[k]} ${cmpSrcCount(day, k)}`).join(" · ");
+  return `
+    <div class="cmp-cards-row">
+      <div class="cmp-card">
+        <div class="cmp-date">昨日 · ${p.date} 周${weekdayOf(p.date)}</div>
+        <div class="cmp-num">${tb}<span class="u">条</span></div>
+        <div class="cmp-sub">${sub(p)}</div>
+      </div>
+      <div class="cmp-vs">VS<span class="${dCls}">${dTxt}</span></div>
+      <div class="cmp-card">
+        <div class="cmp-date">今日 · ${d.date} 周${weekdayOf(d.date)}</div>
+        <div class="cmp-num">${ta}<span class="u">条</span></div>
+        <div class="cmp-sub">${sub(d)}</div>
+      </div>
+    </div>`;
+}
+
+function cmpSourceHtml(d, p) {
+  const rows = [["全部", cmpSrcCount(p, "全部"), cmpSrcCount(d, "全部")]];
+  for (const k of SRC_ORDER) rows.push([SRC_LABEL[k], cmpSrcCount(p, k), cmpSrcCount(d, k)]);
+  const tr = rows.map(([name, b, a]) => {
+    const diff = a - b;
+    const cls = diff > 0 ? "up" : diff < 0 ? "down" : "flat";
+    const badge = diff > 0 ? `+${diff}` : diff < 0 ? `${diff}` : "—";
+    return `<tr><td>${name}</td><td>${b}</td><td>${a}</td><td class="${cls}">${badge}</td></tr>`;
+  }).join("");
+  return `<div class="cmp-block"><h3>来源数量对比</h3>
+    <table class="cmp-table"><thead><tr><th>来源</th><th>昨日</th><th>今日</th><th>变化</th></tr></thead>
+    <tbody>${tr}</tbody></table></div>`;
+}
+
+function cmpCatsHtml(d, p) {
+  const aItems = cmpDayItems(d), bItems = cmpDayItems(p);
+  const ca = {}, cb = {};
+  for (const it of aItems) ca[it.category] = (ca[it.category] || 0) + 1;
+  for (const it of bItems) cb[it.category] = (cb[it.category] || 0) + 1;
+  const cats = [...new Set([...Object.keys(ca), ...Object.keys(cb)])]
+    .sort((x, y) => ((ca[y] || 0) + (cb[y] || 0)) - ((ca[x] || 0) + (cb[x] || 0)));
+  const max = Math.max(1, ...Object.values(ca), ...Object.values(cb));
+  const rows = cats.map((c) => {
+    const a = ca[c] || 0, b = cb[c] || 0, diff = a - b;
+    const cls = diff > 0 ? "up" : diff < 0 ? "down" : "flat";
+    const badge = diff > 0 ? `+${diff}` : diff < 0 ? `${diff}` : "—";
+    return `<div class="cmp-cat-row cat-${esc(c)}">
+      <div class="cmp-cat-name">${esc(c)}<span class="cmp-cat-delta ${cls}">${badge}</span></div>
+      <div class="cmp-bar-row"><span class="cmp-bar-label">昨</span><div class="cmp-bar"><i class="b-old" style="width:${(b / max * 100).toFixed(1)}%"></i></div><span class="cmp-bar-n">${b}</span></div>
+      <div class="cmp-bar-row"><span class="cmp-bar-label">今</span><div class="cmp-bar"><i class="b-new" style="width:${(a / max * 100).toFixed(1)}%"></i></div><span class="cmp-bar-n">${a}</span></div>
+    </div>`;
+  }).join("");
+  return `<div class="cmp-block"><h3>分类分布对比</h3>${rows}</div>`;
+}
+
+function cmpTopicsHtml(d, p) {
+  const aItems = cmpDayItems(d), bItems = cmpDayItems(p);
+  const key = (it) => (it.title || "").trim();
+  const setA = new Set(aItems.map(key));
+  const setB = new Set(bItems.map(key));
+  const dedup = (arr) => {
+    const seen = new Set(), out = [];
+    for (const it of arr) { const k = key(it); if (!seen.has(k)) { seen.add(k); out.push(it); } }
+    return out;
+  };
+  const added = dedup(aItems.filter((it) => !setB.has(key(it))));
+  const gone = dedup(bItems.filter((it) => !setA.has(key(it))));
+  const MAX = 12;
+  const li = (arr) => arr.slice(0, MAX).map((it) => `
+    <li><span class="badge src-badge src-${esc(it.source)}">${SRC_LABEL[it.source] || it.source}</span>
+    ${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}</a>` : esc(it.title)}
+    <span class="badge">${esc(it.category)}</span></li>`).join("");
+  const more = (arr) => arr.length > MAX ? `<p class="cmp-more">… 还有 ${arr.length - MAX} 条，共 ${arr.length} 条</p>` : "";
+  return `<div class="cmp-block"><h3>话题变化</h3>
+    <div class="cmp-topics-col">
+      <div class="cmp-topic">
+        <div class="cmp-topic-head new">今日新增 <span class="n">${added.length}</span></div>
+        ${added.length ? `<ul>${li(added)}</ul>${more(added)}` : `<p class="empty-s">今日无新增话题</p>`}
+      </div>
+      <div class="cmp-topic">
+        <div class="cmp-topic-head gone">昨日独有 <span class="n">${gone.length}</span></div>
+        ${gone.length ? `<ul>${li(gone)}</ul>${more(gone)}` : `<p class="empty-s">昨日话题今日全部保留</p>`}
+      </div>
+    </div>
+  </div>`;
+}
+
 /* ---------- 视图切换 ---------- */
 
 function setView(v) {
   state.view = v;
+  history.replaceState(null, "", "#" + v);
   document.querySelectorAll(".vbtn").forEach((b) =>
     b.classList.toggle("active", b.dataset.view === v));
   const isArch = v === "archive";
-  $("toolbar").hidden = isArch;
-  $("newsList").hidden = isArch;
-  $("highlights").hidden = isArch;
+  const isCmp = v === "compare";
+  $("toolbar").hidden = isArch || isCmp;
+  $("newsList").hidden = isArch || isCmp;
+  $("highlights").hidden = isArch || isCmp;
   $("archiveView").hidden = !isArch;
+  $("compareView").hidden = !isCmp;
   if (isArch) {
     hideState();
     if (!state.arch.data) {
@@ -304,6 +469,8 @@ function setView(v) {
     } else {
       renderArchive();
     }
+  } else if (isCmp) {
+    loadCompare(state.cmp.date || state.dates[state.dates.length - 1]);
   } else if (state.data) {
     renderAll();
   }
@@ -341,9 +508,11 @@ $("refreshBtn").onclick = async () => {
   const btn = $("refreshBtn");
   btn.classList.add("spinning");
   try {
-    state.arch.data = null; // 顺带刷新归档缓存
+    state.arch.data = null;        // 顺带刷新归档缓存
+    state.cmp.data = null; state.cmp.prevData = null;  // 刷新对比缓存
     await loadIndex(true);
     if (state.view === "archive") renderArchive();
+    else if (state.view === "compare") await loadCompare(state.cmp.date || state.dates[state.dates.length - 1]);
     toast("数据已刷新");
   } catch (e) {
     toast("刷新失败：" + e.message);
@@ -374,8 +543,10 @@ $("searchInput").oninput = (e) => {
 /* ---------- 启动 ---------- */
 
 (async function init() {
+  const wantView = location.hash.replace("#", "");  // 先读深链（避免被 loadDay 覆盖）
   try {
     await loadIndex();
+    if (wantView === "archive" || wantView === "compare") setView(wantView);  // 深链直达
   } catch (e) {
     showState(`加载失败：${e.message}。请检查网络后点击"刷新"重试。`, true);
   }

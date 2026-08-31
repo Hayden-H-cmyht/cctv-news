@@ -39,6 +39,7 @@
 <nav class="view-switch" id="viewSwitch" aria-label="视图切换">
   <button class="vbtn active" data-view="daily">每日速览</button>
   <button class="vbtn" data-view="archive">往期归类</button>
+  <button class="vbtn" data-view="compare">昨日/今日对比</button>
 </nav>
 
 <div class="toolbar" id="toolbar" hidden>
@@ -68,6 +69,18 @@
       <div class="cat-chips" id="archCatChips"></div>
     </div>
     <div class="arch-list" id="archList"></div>
+  </section>
+
+  <section class="card compare" id="compareView" hidden>
+    <div class="cmp-head">
+      <h2>昨日 / 今日数据对比</h2>
+      <p class="cmp-hint">点选「今日」日期，自动对比其前一天</p>
+      <div class="cmp-strip" id="cmpStrip" aria-label="选择对比日期"></div>
+    </div>
+    <div id="cmpCards"></div>
+    <div id="cmpSource"></div>
+    <div id="cmpCats"></div>
+    <div id="cmpTopics"></div>
   </section>
 
   <div class="state-msg" id="stateMsg"></div>
