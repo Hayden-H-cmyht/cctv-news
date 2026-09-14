@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-13 17:00:54",
+ "updated_at": "2026-09-14 18:47:53",
  "sources": {
   "xwlb": "新闻联播",
   "jjxxll": "央视财经 · 经济信息联播"
@@ -17732,6 +17732,374 @@
    "title": "全球服务 互惠共享 《2026中国暑期旅游市场洞察报告》发布 深度体验带动消费升级",
    "url": "https://tv.cctv.com/2026/09/13/VIDE1utbNKwwNIaorGauROcZ260913.shtml",
    "gist": "全球服务·互惠共享：《2026中国暑期旅游市场洞察报告》发布，深度体验带动消费升级"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "习近平结束出席金砖国家领导人第十八次会晤回到北京",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEBC88hUqmZQVjuzJkY0OO260914.shtml",
+   "gist": "9月13日晚，国家主席习近平圆满结束出席金砖国家领导人第十八次会晤回到北京。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "为全球南方聚力 启金砖合作新程——习近平主席赴印度出席金砖国家领导人第十八次会晤取得圆满成功",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEmp3yikvTOeendyE2ZffO260914.shtml",
+   "gist": "9月12日至13日，国家主席习近平应邀赴印度出席金砖国家领导人第十八次会晤。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "其他",
+   "title": "央视快评：把握历史主动 壮大全球南方力量",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEgsrbt4qDApxMxJXlHaTP260914.shtml",
+   "gist": "本台播发央视快评《把握历史主动 壮大全球南方力量》。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "经济财经",
+   "title": "【“十五五”开好局起好步】推动健康中国建设取得决定性进展",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEVmKQfqkfuQvuJ458YNTq260914.shtml",
+   "gist": "国务院新闻办公室今天（9月14日）举行“开局起步‘十五五’”系列主题新闻发布会，国家卫生健康委等单位介绍推动健康中国建设取得决定性进展有关情况。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "经济财经",
+   "title": "【凝心聚力 真抓实干 奋力实现“十五五”良好开局】四川加快建设清洁能源强省",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEqnMOnH5oTbYyL7h9OV84260914.shtml",
+   "gist": "“十五五”规划纲要提出，深入实施能源安全新战略，加快构建清洁低碳安全高效的新型能源体系，建设能源强国。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "经济财经",
+   "title": "金融总量合理增长 有力支撑经济向新向优向好发展",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEIgImOOtjLor7FOhrdBBz260914.shtml",
+   "gist": "中国人民银行今天（9月14日）公布的数据显示，8月末，广义货币（M2）余额356.81万亿元，同比增长7.5%；社会融资规模存量为464.8万亿元。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "经济财经",
+   "title": "多部门合力治理中小企业回款难",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEOSP7yfSeTTEs4Zwh8SVD260914.shtml",
+   "gist": "记者从国务院新闻办公室今天（9月14日）举行的政策例行吹风会了解到，针对造成中小企业回款难的堵点难点问题，今后国家将继续健全行业账款支付规则，分行业明确合理账期…"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "国务院对中国船舶集团青岛北海造船有限公司“9·10”重大火灾事故提级调查",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEj9cg3eLhALnmlaqkYVVF260914.shtml",
+   "gist": "9月10日11时15分许，中国船舶集团青岛北海造船有限公司一艘外籍货轮靠港维修期间发生火灾，造成25人死亡、5人受伤。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "经济财经",
+   "title": "抓好秋粮生产 保障粮食丰收",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEgg0p41SeufvGZeUR4WoQ260914.shtml",
+   "gist": "当前，全国秋粮全面进入产量形成关键期，各地落实落细各项措施，全力以赴抓好秋粮生产，奠定秋粮丰收基础。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "2030年我国将进入世界汽车强国行列",
+   "url": "https://tv.cctv.com/2026/09/14/VIDE2AOpgVZ11hf6vcmz7afz260914.shtml",
+   "gist": "工业和信息化部、国家发展改革委等九部门近日发布了《智能网联新能源汽车产业发展“十五五”规划》，提出到2030年，我国智能网联新能源汽车全产业链优势进一步巩固，进…"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "经济财经",
+   "title": "我国县域消费加速扩容提质",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEQbezPpAM1PUCK5P9jHLj260914.shtml",
+   "gist": "今年以来，我国县域商业设施持续完善，商品与服务供给不断丰富，县域居民消费呈现加速扩容提质的良好态势。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "社会民生",
+   "title": "2026年国家网络安全宣传周今天启动",
+   "url": "https://tv.cctv.com/2026/09/14/VIDECmCqDpnd1npBn04Nov0x260914.shtml",
+   "gist": "由中央宣传部、中央网信办等十部门联合举办的2026年国家网络安全宣传周今天（9月14日）在山东济南开幕，今年的主题是“智能时代网安护航”。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "经济财经",
+   "title": "秋色宜人 尽享秋日好时光",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEmHq6fKNi9fRN1s4xBAth260914.shtml",
+   "gist": "眼下秋意渐浓，各地因地制宜推出特色赏秋路线，人们在斑斓秋色中，尽享秋日好时光。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "国内联播快讯",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEAyglc07MqCGBIoVIsJ06260914.shtml",
+   "gist": "《军营理论热点怎么看·2026》印发全军  为坚持不懈用习近平新时代中国特色社会主义思想凝心铸魂，由中央军委政治工作部宣传局组织编写的通俗理论读物《军营理论热点…"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "军事国防",
+   "title": "也门胡塞武装称多地遭袭 政府军称夺回部分阵地",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEDGKtokKGxHuMlio6U22t260914.shtml",
+   "gist": "也门胡塞武装13日发布声明称，过去24小时，沙特阿拉伯出动F-15战机对也门塔伊兹省、拉赫季省、焦夫省等6个省份发动了58次空袭。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "国际联播快讯",
+   "url": "https://tv.cctv.com/2026/09/14/VIDE4SWscMb0vuFRX3uesSYj260914.shtml",
+   "gist": "阿曼和伊朗宣布推迟举行地区会议  阿曼外交大臣巴德尔13日称，为寻求共识，原定14日在阿曼举行的地区会议已推迟。"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "香气扑鼻 阿根廷小镇举办传统烤肉节",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEVmgMTKwhYALKVWXqh9Tf260914.shtml",
+   "gist": "香气扑鼻，阿根廷小镇举办传统烤肉节"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "面临破产 美国肯尼迪表演艺术中心或关闭主楼",
+   "url": "https://tv.cctv.com/2026/09/14/VIDE23u9hf2RgOugOQqHZC4W260914.shtml",
+   "gist": "面临破产，美国肯尼迪表演艺术中心或关闭主楼"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "莱茵河低水位或致德国巨额经济损失",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEAjYHoTMX0gAr8ux3mL0T260914.shtml",
+   "gist": "莱茵河低水位或致德国巨额经济损失"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "日本中部电力公司数据造假丑闻发酵",
+   "url": "https://tv.cctv.com/2026/09/14/VIDENGkU08X0KRAwZACBIIO5260914.shtml",
+   "gist": "日本中部电力公司数据造假丑闻发酵"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "已灭绝古生物“奥氏马”完整形态被复原",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEZO9tHpdLTkMIwqFDp9CV260914.shtml",
+   "gist": "已灭绝古生物“奥氏马”完整形态被复原"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "“疆煤入冀”万吨首发专列运抵唐山港",
+   "url": "https://tv.cctv.com/2026/09/14/VIDE6bR5DsOXLxIMd8jlIgti260914.shtml",
+   "gist": "“疆煤入冀”万吨首发专列运抵唐山港"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "社会民生",
+   "title": "全国药品安全宣传周启动",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEPPz5aEpwiVt5imM9lbZJ260914.shtml",
+   "gist": "全国药品安全宣传周启动"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "第23届中国—东盟博览会进境展品全部入境",
+   "url": "https://tv.cctv.com/2026/09/14/VIDES6MXMQx2XlcycXo25XrK260914.shtml",
+   "gist": "第23届中国—东盟博览会进境展品全部入境"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "跨国公司资金池政策今日起推广至全国",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEAmd3Fg47hMI6MaP8Vf8K260914.shtml",
+   "gist": "跨国公司资金池政策14日起推广至全国"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "印尼客轮倾覆后倒扣漂浮 仍有129人失联",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEc7Zo9NzmA0uaqay94dsk260914.shtml",
+   "gist": "印尼客轮倾覆后倒扣漂浮，仍有129人失联"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "韩国证券交易所今起增设盘后交易至晚上8点",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEuhEkHRh3TSO3eK0eTqdn260914.shtml",
+   "gist": "韩国证券交易所14日起增设盘后交易至晚上8点"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "中东局势升级 国际油价14日涨超2%",
+   "url": "https://tv.cctv.com/2026/09/14/VIDE9vn12r0aW8H8BTHqwcjK260914.shtml",
+   "gist": "中东局势升级，国际油价14日涨超2%"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "胡塞武装称也门一天内遭沙特数十次空袭",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEl0BncomZLivYEHEXuh9f260914.shtml",
+   "gist": "胡塞武装称也门一天内遭沙特数十次空袭"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "9月加息概率逼近90%！特朗普再度施压美联储",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEYk1rqVGQqUhzCA6a79uA260914.shtml",
+   "gist": "9月加息概率逼近90%！特朗普再度施压美联储"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "国际市场价格两年涨了9倍 全球钨资源争夺升温",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEz84eW1gu5bGj0lv3bLvi260914.shtml",
+   "gist": "国际市场价格两年涨了9倍，全球钨资源争夺升温"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "联播调查·牛肉价格上涨 数字化5G牧场助力肉牛生产提质增效",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEL60VHWDQVbRBH7hKgTM0260914.shtml",
+   "gist": "联播调查·牛肉价格上涨：数字化5G牧场助力肉牛生产提质增效"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "联播调查·牛肉价格上涨 河北：肉牛价格上涨 养殖户出栏一头牛盈利2000元以上",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEitBQTjXOhuk3vcuZTh7J260914.shtml",
+   "gist": "联播调查·牛肉价格上涨，河北：肉牛价格上涨，养殖户出栏一头牛盈利2000元以上"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "联播调查·牛肉价格上涨 中秋国庆临近 全国牛肉价格持续上涨",
+   "url": "https://tv.cctv.com/2026/09/14/VIDET3PmZ7YprbHNE7J87AgP260914.shtml",
+   "gist": "联播调查·牛肉价格上涨：中秋国庆临近，全国牛肉价格持续上涨"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "科技教育",
+   "title": "全球首个人工智能+脑机接口标准中国首发 明年9月1日起正式实施",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEHxgBDJkkQOrcpMgtdoQJ260914.shtml",
+   "gist": "全球首个人工智能+脑机接口标准中国首发，2027年9月1日起正式实施"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "商务部等8部门印发《促进智能家居消费行动方案》",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEsbz9AoRzmb6HLvYN8zU3260914.shtml",
+   "gist": "商务部等8部门印发《促进智能家居消费行动方案》"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "国家医保局通报一起涉案1.84亿元医药购销商业贿赂案",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEIhQgkvxrPwOT74AEl8tm260914.shtml",
+   "gist": "国家医保局通报一起涉案1.84亿元医药购销商业贿赂案"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "科创50指数第三季度调样生效 “AI属性”再提升",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEpTIAxbrzB3RwdA52RfYk260914.shtml",
+   "gist": "科创50指数第三季度调样生效，“AI属性”再提升"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "央行发布8月金融统计数据报告 社会融资规模存量同比增长7.2%",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEnH4tAoI83YTqpqa3eUVm260914.shtml",
+   "gist": "央行发布8月金融统计数据报告，社会融资规模存量同比增长7.2%"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "多部门：加大对中小企业融资支持力度 引导上市公司压缩账期",
+   "url": "https://tv.cctv.com/2026/09/14/VIDExwmaM4tJOLMykrbhrr3C260914.shtml",
+   "gist": "多部门：加大对中小企业融资支持力度，引导上市公司压缩账期"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "工信部：推动龙头企业率先践行“60日付现承诺”",
+   "url": "https://tv.cctv.com/2026/09/14/VIDE5mM4dCZhoyjaAjKqxfoC260914.shtml",
+   "gist": "工信部：推动龙头企业率先践行“60日付现承诺”"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "开局起步“十五五” 国家卫健委：让群众在家门口看得上病 看得好病",
+   "url": "https://tv.cctv.com/2026/09/14/VIDE90VWCXNAWH00CZ726VnT260914.shtml",
+   "gist": "开局起步“十五五”·国家卫健委：让群众在家门口看得上病，看得好病"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "与经济学家一起旅行——你好，平陆运河",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEeBADuSG59OQk9nc0N3pv260914.shtml",
+   "gist": "与经济学家一起旅行——你好，平陆运河"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "平陆运河通航在即 从越南永安港经平陆运河至贵港 比传统线路运输时长缩短5-7天",
+   "url": "https://tv.cctv.com/2026/09/14/VIDEmsGlHeajZf56zqsh6238260914.shtml",
+   "gist": "平陆运河通航在即：从越南永安港经平陆运河至贵港，比传统线路运输时长缩短5-7天"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "平陆运河通航在即 平陆运河：世纪工程通江达海",
+   "url": "https://tv.cctv.com/2026/09/14/VIDELcX2QTFHcESiO2Oa9Ium260914.shtml",
+   "gist": "平陆运河通航在即·平陆运河：世纪工程通江达海"
+  },
+  {
+   "date": "2026-09-14",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "平陆运河通航在即 平陆运河9月16日通航 全线准备就绪",
+   "url": "https://tv.cctv.com/2026/09/14/VIDE4j8MA4RJr9dcyHZ4gfXG260914.shtml",
+   "gist": "平陆运河通航在即：平陆运河9月16日通航，全线准备就绪"
   }
  ]
 }
