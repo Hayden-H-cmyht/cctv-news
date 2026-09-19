@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-18 17:08:51",
+ "updated_at": "2026-09-19 16:39:14",
  "sources": {
   "xwlb": "新闻联播",
   "jjxxll": "央视财经 · 经济信息联播"
@@ -19268,6 +19268,366 @@
    "title": "持续做大做强先进制造业 浙江慈溪：“数智提质”赋能小家电制造产业焕新",
    "url": "https://tv.cctv.com/2026/09/18/VIDE5oBE80rxJSQGmp3AVkbf260918.shtml",
    "gist": "持续做大做强先进制造业·浙江慈溪：“数智提质”赋能小家电制造产业焕新"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "【新思想引领新征程】大河润华夏",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEvcvwGg8jXJvorESrZPoT260919.shtml",
+   "gist": "横贯华夏大地的黄河是孕育中华文明的母亲河。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "【赓续长征精神 奋进复兴征程】湖南：红色热土 向新而行",
+   "url": "https://tv.cctv.com/2026/09/19/VIDENYfHnzkjD9uHRcDOeSr7260919.shtml",
+   "gist": "湖南是红军长征经过的15个省份之一，红军将士在此留下了可歌可泣的英雄壮歌。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "科技教育",
+   "title": "我国制造业高端化转型加速",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEnt6SYXab4axyKfRPM9HX260919.shtml",
+   "gist": "今年以来，我国制造业持续加快转型升级，高端化、智能化、绿色化步伐提速，推动工业经济不断提质向新。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "经济财经",
+   "title": "前8个月全国一般公共预算收入同比增长5.7%",
+   "url": "https://tv.cctv.com/2026/09/19/VIDER4MDUkModY84xv8sEm9u260919.shtml",
+   "gist": "财政部数据显示：今年1—8月，全国一般公共预算收入15.66万亿元，同比增长5.7%，总体平稳增长。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "经济财经",
+   "title": "前8个月全国完成水利建设投资近7000亿元",
+   "url": "https://tv.cctv.com/2026/09/19/VIDECY8gMKUu73JxtEkeSorB260919.shtml",
+   "gist": "记者从水利部了解到，今年以来，我国加快推进国家水网建设。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "军事国防",
+   "title": "各地开展形式多样的群众性国防教育活动",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEL5qycpSLv8GvQFis3FfR260919.shtml",
+   "gist": "各地开展形式多样的群众性国防教育活动，引导广大干部群众增强国防观念、履行国防义务。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "我国航天健康保障体系达到国际先进水平",
+   "url": "https://tv.cctv.com/2026/09/19/VIDENBWWhA2kLgGmeN2gm3L4260919.shtml",
+   "gist": "记者今天（9月19日）从我国首届航天医学工程大会上获悉，中国空间站稳定运行五年来，我国航天健康保障体系总体达到国际先进水平，空间站长期驻留保障能力持续提升。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "社会民生",
+   "title": "【文化中国行】朱熹园：文脉活水 流润今朝",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEL3e3zsRL651s5e7Dd7Ht260919.shtml",
+   "gist": "“问渠那得清如许？"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "第二十届亚运会今天开幕",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEX0hQOhSNwzXFNflcJHkG260919.shtml",
+   "gist": "第二十届亚洲运动会今天（9月19日）在日本开幕。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "科技教育",
+   "title": "国内联播快讯",
+   "url": "https://tv.cctv.com/2026/09/19/VIDExWhhJ6PgMQb9MxocZykg260919.shtml",
+   "gist": "《文化产业发展“十五五”规划》发布  文化和旅游部近日发布《文化产业发展“十五五”规划》。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "军事国防",
+   "title": "俄罗斯要求日方撤出在日部署的“堤丰”导弹系统",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEDVqTmaDBERiQwexlPoCF260919.shtml",
+   "gist": "俄罗斯外交部发言人扎哈罗娃18日在俄外交部官网发表评论说，俄方要求日方撤出在日本部署的美国“堤丰”中程导弹系统。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "军事国防",
+   "title": "也门胡塞武装称遭沙特密集空袭 沙特首都发布本轮冲突首次防空警报",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEDBunAYUIZg8HV0H3ueQv260919.shtml",
+   "gist": "也门胡塞武装发言人叶海亚18日称，过去24小时，沙特战机对也门塔伊兹省发动了26次空袭。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "国际联播快讯",
+   "url": "https://tv.cctv.com/2026/09/19/VIDE4bO7Db2AGMnWOOzZAN6s260919.shtml",
+   "gist": "中方强调联合国维和行动要服务政治进程  联合国安理会18日举行维和行动辩论会。"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "《对话》稍后播出《当“薯都”遇见Token》",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEsDp5sQ7siQ8lU5JJXtfD260919.shtml",
+   "gist": "《对话》稍后播出《当“薯都”遇见Token》"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "智利：阿塔卡马沙漠现花海美景",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEcX1Hixseoc3MRATHX16h260919.shtml",
+   "gist": "智利：阿塔卡马沙漠现花海美景"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "日本核心CPI连续60个月同比上涨",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEBB7IB9LS31iq7PwqNM51260919.shtml",
+   "gist": "日本核心CPI连续60个月同比上涨"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "紧缺的“电子工业大米” 广东深圳：一小时一价 MLCC部分型号价格上涨数倍",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEfhLQi7oTrDj13GVRS0fX260919.shtml",
+   "gist": "紧缺的“电子工业大米”·广东深圳：一小时一价，MLCC部分型号价格上涨数倍"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "社会民生",
+   "title": "湖南张家界：极限运动吸引全球目光 入境旅游活力迸发",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEB7bqxS5YzBEFQgoK52fX260919.shtml",
+   "gist": "湖南张家界：极限运动吸引全球目光，入境旅游活力迸发"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "社会民生",
+   "title": "“国庆假期部分列车疑似票价上涨”引关注",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEjykkYncvwKmyfn14637P260919.shtml",
+   "gist": "“国庆假期部分列车疑似票价上涨”引关注"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "北京：四家在线酒店旅游预订平台企业被立案调查",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEt5mRflKqNcO6puc0Ti0k260919.shtml",
+   "gist": "北京：四家在线酒店旅游预订平台企业被立案调查"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "科技教育",
+   "title": "人工智能服务出海强劲 词元出海面向东盟开辟数据要素新赛道",
+   "url": "https://tv.cctv.com/2026/09/19/VIDE48jzoOTzq6rf7uUdCeK5260919.shtml",
+   "gist": "人工智能服务出海强劲：词元出海面向东盟开辟数据要素新赛道"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "奔流“十五五” 长江万里行 重庆：“屏”实力聚链成群 新赛道乘风而起",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEJbesJ26krfOst3RqeBNQ260919.shtml",
+   "gist": "奔流“十五五”，长江万里行，重庆：“屏”实力聚链成群，新赛道乘风而起"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "百余年来首次 猫科再添现存新物种",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEwIEEr1YqL6hhaMokOqDY260919.shtml",
+   "gist": "百余年来首次，猫科再添现存新物种"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "广州：第140届广交会将于10月15日至11月4日举办",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEMAi7QxwFqHpATanARlhn260919.shtml",
+   "gist": "广州：第140届广交会将于10月15日至11月4日举办"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "社会民生",
+   "title": "1至8月全国铁路发送旅客33.2亿人次",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEQbTMZsPsjmb0XGAuEJll260919.shtml",
+   "gist": "1至8月全国铁路发送旅客33.2亿人次"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "科技教育",
+   "title": "研究发现两大冰盖40多年损失超11万亿吨冰",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEcfrlgleMFskNtKk42MO7260919.shtml",
+   "gist": "研究发现两大冰盖40多年损失超11万亿吨冰"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "胡塞武装称沙特本周对也门发动300次空袭",
+   "url": "https://tv.cctv.com/2026/09/19/VIDETgketo3KZW16XOvUBhHR260919.shtml",
+   "gist": "胡塞武装称沙特本周对也门发动300次空袭"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "紧缺的“电子工业大米” 广东深圳：订单排到明年二季度 国内MLCC厂扩产高容量产品",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEuNGovydJMsxihU770Pjh260919.shtml",
+   "gist": "紧缺的“电子工业大米”·广东深圳：订单排到2027年二季度，国内MLCC厂扩产高容量产品"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "广东：无堂食外卖店铺拟全部实现后厨视频直播",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEPiti2jNDbGCOh0SxEexV260919.shtml",
+   "gist": "广东：无堂食外卖店铺拟全部实现后厨视频直播"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "节前看市场 浙江宁波：“第一网”海鲜运抵 精品水产迎销售高峰",
+   "url": "https://tv.cctv.com/2026/09/19/VIDE6y2fb8qN1HIP63NaLPJ1260919.shtml",
+   "gist": "节前看市场·浙江宁波：“第一网”海鲜运抵，精品水产迎销售高峰"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "节前看市场 宁夏盐池：“一锅好肉”激活全场景消费",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEGslg9Nb8WJJN4tioP01j260919.shtml",
+   "gist": "节前看市场·宁夏盐池：“一锅好肉”激活全场景消费"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "科技教育",
+   "title": "人工智能服务出海强劲 从法律检索翻译到光伏运维 AI服务加速出海东盟",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEl2pOAAEVzPlXEEAcgaKz260919.shtml",
+   "gist": "人工智能服务出海强劲：从法律检索翻译到光伏运维，AI服务加速出海东盟"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "商务部就中美经贸磋商有关问题答记者问",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEnsDpgQ3aWe1TN8kbBtCI260919.shtml",
+   "gist": "商务部就中美经贸磋商有关问题答记者问"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "沃伦·巴菲特卸任伯克希尔-哈撒韦董事长",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEv9VyhEjp3CsI020zLaQh260919.shtml",
+   "gist": "沃伦·巴菲特卸任伯克希尔-哈撒韦董事长"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "山西临汾：联合排沙流量加大 壶口瀑布再现瀑布群",
+   "url": "https://tv.cctv.com/2026/09/19/VIDErd9lrlNXmaSoVW5CJ2Il260919.shtml",
+   "gist": "山西临汾：联合排沙流量加大，壶口瀑布再现瀑布群"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "迎国庆 北京市民家养鲜花将亮相长安街",
+   "url": "https://tv.cctv.com/2026/09/19/VIDE2cHMBAZtDzSdFIYxA4B5260919.shtml",
+   "gist": "迎国庆，北京市民家养鲜花将亮相长安街"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "Anthropic拟推新模型抗衡OpenAI IPO或推迟",
+   "url": "https://tv.cctv.com/2026/09/19/VIDE227LKpNeUHQHclUtB7Hi260919.shtml",
+   "gist": "Anthropic拟推新模型抗衡OpenAI IPO或推迟"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "社会民生",
+   "title": "谷歌承认其AI模型在安全测试中侵入三家公司系统",
+   "url": "https://tv.cctv.com/2026/09/19/VIDE7VT3T3wCSP0ClfmPA2dc260919.shtml",
+   "gist": "谷歌承认其AI模型在安全测试中侵入三家公司系统"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "知情人士：沙特阿美10月将暂停向欧洲客户供应原油",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEa5UFb1Jj1TIfpQdZ5XOY260919.shtml",
+   "gist": "知情人士：沙特阿美10月将暂停向欧洲客户供应原油"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "欧元集团：能源价格上涨加剧欧洲经济压力",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEbTVm6IcCfFye1SJerb1j260919.shtml",
+   "gist": "欧元集团：能源价格上涨加剧欧洲经济压力"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "紧缺的“电子工业大米” 广东深圳：AI服务器叠加光模块需求爆发 高容量MLCC成抢手货",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEQrLp0YEXbbRRLJ5NW2MB260919.shtml",
+   "gist": "紧缺的“电子工业大米”·广东深圳：AI服务器叠加光模块需求爆发，高容量MLCC成抢手货"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "节前看市场 福建福州：深水大黄鱼丰收 连夜打包销往全国",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEqWplhVNoalyOZXMUsd51260919.shtml",
+   "gist": "节前看市场·福建福州：深水大黄鱼丰收，连夜打包销往全国"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "节前看市场 宁夏盐池：滩羊“触网”拓销路 饲养与物流体系全面升级",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEcWdMdAgUz23isQ5ZROnD260919.shtml",
+   "gist": "节前看市场·宁夏盐池：滩羊“触网”拓销路，饲养与物流体系全面升级"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "社会民生",
+   "title": "国庆假期第3天火车票今天开售",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEDJQ7Hs3vozHy0Ti1vhHS260919.shtml",
+   "gist": "国庆假期第3天火车票19日开售"
+  },
+  {
+   "date": "2026-09-19",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "聚焦第23届中国—东盟博览会 记者观察：东盟出题中企解题 东博会新机制促进务实合作",
+   "url": "https://tv.cctv.com/2026/09/19/VIDEik5qGiXsH33qaKPQsiNz260919.shtml",
+   "gist": "聚焦第23届中国—东盟博览会·记者观察：东盟出题中企解题，东博会新机制促进务实合作"
   }
  ]
 }
