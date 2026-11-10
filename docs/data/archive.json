@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09 23:05:15",
+ "updated_at": "2026-11-10 20:32:03",
  "sources": {
   "xwlb": "新闻联播",
   "jjxxll": "央视财经 · 经济信息联播"
@@ -38068,6 +38068,390 @@
    "title": "国家统计局：10月份CPI环比持平 同比上涨0.7%",
    "url": "https://tv.cctv.com/2026/11/09/VIDElxIGdXYkZtkAbDzTbUIL261109.shtml",
    "gist": "国家统计局：10月份CPI环比持平，同比上涨0.7%"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "习近平同志《论减贫脱贫》出版发行",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEJxUmyIpsVaaGevxoMvgO261110.shtml",
+   "gist": "中共中央党史和文献研究院编辑的习近平同志《论减贫脱贫》，近日由中央文献出版社出版，在全国发行。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "【新思想引领新征程】粤港澳同心协力 加快建设国际一流湾区",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEl8LEIhbkjt3PanXHvOUE261110.shtml",
+   "gist": "建设粤港澳大湾区是习近平总书记亲自谋划、亲自部署、亲自推动的重大国家战略。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "赵乐际会见哥伦比亚多党干部考察团",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEjwirRMc5pGFOX7sI96Pg261110.shtml",
+   "gist": "中共中央政治局常委、全国人大常委会委员长赵乐际10日在北京会见由众议长巴吉尔率领的哥伦比亚多党干部考察团。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "王沪宁会见老挝建国阵线中央副主席",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEUuvzfacFF5rml7ehRBJT261110.shtml",
+   "gist": "全国政协主席王沪宁10日在京会见老挝建国阵线中央副主席布沙迪。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "【学习贯彻党的二十届五中全会精神】中央宣讲团在各地各部门宣讲党的二十届五中全会精神",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEU4YRvvFeBeGobdH0jMj4261110.shtml",
+   "gist": "连日来，学习贯彻党的二十届五中全会精神中央宣讲团成员在各地各部门宣讲，并与基层干部群众互动交流，推动全会精神学习走深走实。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "经济财经",
+   "title": "前10个月我国外贸同比增长20% 保持强劲增长态势",
+   "url": "https://tv.cctv.com/2026/11/10/VIDE0NUutN2RKsLv6LY5Zeqq261110.shtml",
+   "gist": "海关总署今天（11月10日）对外公布最新统计数据，今年前10个月，我国货物贸易进出口同比增长20%，保持强劲增长态势。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "社会民生",
+   "title": "“十五五”时期我国将采取多项举措保障和改善民生",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEg2rjulkAH0MupDorU1t7261110.shtml",
+   "gist": "记者从国家发展改革委了解到，“十五五”时期，国家将聚焦人民群众急难愁盼问题，实施更加公平普惠、精准有力的社会政策。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "军事国防",
+   "title": "【赓续长征精神 奋进复兴征程】湖北：长征精神耀荆楚 砥砺奋进新支点",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEw2uzi9TdQfDK9uYf5pb8261110.shtml",
+   "gist": "在长征这部波澜壮阔的英雄史诗中，湖北走出的多支红军队伍，为长征胜利立下了不朽功勋。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "【新闻特写】再见进博 你好APEC！",
+   "url": "https://tv.cctv.com/2026/11/10/VIDE6KbCeXPKJIG0Y1avVXwJ261110.shtml",
+   "gist": "第九届进博会今天（11月10日）在上海闭幕，多项数据创新高。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "经济财经",
+   "title": "新疆塔克拉玛干沙漠生态成果持续释放产业效益",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEAqR7FXW4jGN7G3GsguR3261110.shtml",
+   "gist": "新疆塔克拉玛干沙漠边缘绿色阻沙防护带实现锁边合龙以来，周边地区持续推进扩边增绿，通过“生态产业化、产业生态化”，不断推动生态成果转化为产业效益。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "科技教育",
+   "title": "国内联播快讯",
+   "url": "https://tv.cctv.com/2026/11/10/VIDE0Fo6dZ6TdNIyG7G1CWL1261110.shtml",
+   "gist": "2026年第九期和第十期储蓄国债（电子式）今起发行  2026年第九期和第十期储蓄国债（电子式）今天（11月10日）开始发行。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "围绕乌克兰问题 俄美乌新一轮三方谈判举行",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEH8MjDhHQaVewB71hClKG261110.shtml",
+   "gist": "阿联酋阿布扎比当地时间今天（11月10日）中午，北京时间今天下午，围绕乌克兰问题的俄罗斯、乌克兰、美国三方谈判开始举行，俄总统助理梅金斯基、乌对外情报局局长乌梅…"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "国际联播快讯",
+   "url": "https://tv.cctv.com/2026/11/10/VIDESYmHpV4RTEDLi853dn8q261110.shtml",
+   "gist": "COP31开幕 “中国角”举行首日活动  《联合国气候变化框架公约》第三十一次缔约方大会（COP31）9日在土耳其安塔利亚开幕。"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "斯洛文尼亚：两名运动员在欧洲最高烟囱挑战人体弹射",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEZSjhE0l1GcPLOwdWx45o261110.shtml",
+   "gist": "斯洛文尼亚：两名运动员在欧洲最高烟囱挑战人体弹射"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "社会民生",
+   "title": "埃及：脱轨事故受损车厢移除 铁路恢复运行",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEd3j6EMJYVNQU97svb3Xk261110.shtml",
+   "gist": "埃及：脱轨事故受损车厢移除，铁路恢复运行"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "社会民生",
+   "title": "西班牙铁路员工罢工 乘客通勤受影响",
+   "url": "https://tv.cctv.com/2026/11/10/VIDELpSgwYExYkAfDIrkLbb5261110.shtml",
+   "gist": "西班牙铁路员工罢工，乘客通勤受影响"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "肯尼亚开展联合缉毒行动 缴获454公斤冰毒",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEhG8Fjs8uS0n9hHuYyOBa261110.shtml",
+   "gist": "肯尼亚开展联合缉毒行动，缴获454公斤冰毒"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "社会民生",
+   "title": "12月起铁路客运电子发票服务再优化",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEbaoq57fsZbQzRKc09Rek261110.shtml",
+   "gist": "12月起铁路客运电子发票服务再优化"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "宁波舟山港年集装箱吞吐量突破4000万箱",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEuPk3X9blN4P22eYvacxw261110.shtml",
+   "gist": "宁波舟山港年集装箱吞吐量突破4000万箱"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "前三季度保险业原保费收入5.26万亿元",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEgcZ9xSBFmczXOBlx19Ok261110.shtml",
+   "gist": "前三季度保险业原保费收入5.26万亿元"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "科技教育",
+   "title": "教育部等三部门部署实施服务乡村振兴高校招生专项计划",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEW5cd3H1sJ1IIK5Ik4rjk261110.shtml",
+   "gist": "教育部等三部门部署实施服务乡村振兴高校招生专项计划"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "美国波音公司民用飞机部门将裁员5%",
+   "url": "https://tv.cctv.com/2026/11/10/VIDENeCgtQc7uzqSM8elJVB3261110.shtml",
+   "gist": "美国波音公司民用飞机部门将裁员5%"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "Anthropic更新招股文件：IPO最高募资644亿美元",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEDRpSJm7MBOjT3gibOHZM261110.shtml",
+   "gist": "Anthropic更新招股文件：IPO最高募资644亿美元"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "马斯克：将向部分Cybertruck客户退还订金",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEmdnXCNwNdm8ZNbAhZRfA261110.shtml",
+   "gist": "马斯克：将向部分Cybertruck客户退还订金"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "土耳其西部钢铁厂发生爆炸致16死13伤",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEQlmViFAy7y5pWlNbcxES261110.shtml",
+   "gist": "土耳其西部钢铁厂发生爆炸致16死13伤"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "法国就网络攻击事件召见伊朗大使",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEPfv3ts6hdpblOJGnMNSm261110.shtml",
+   "gist": "法国就网络攻击事件召见伊朗大使"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "美国2026财年联邦预算赤字达2万亿美元",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEw6cyxQwCzYJiirvoAMMe261110.shtml",
+   "gist": "美国2026财年联邦预算赤字达2万亿美元"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "美众议员提交议案 要求弹劾防长赫格塞思",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEgasTxqqX7gkZY3U1MvCM261110.shtml",
+   "gist": "美众议员提交议案，要求弹劾防长赫格塞思"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "10日国际油价下跌 布伦特油价盘中跌破每桶90美元",
+   "url": "https://tv.cctv.com/2026/11/10/VIDE2WgrKHx3DHJBFvOu43FI261110.shtml",
+   "gist": "10日国际油价下跌，布伦特油价盘中跌破每桶90美元"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "特朗普称伊朗战事已“事实上结束”",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEmEod27zp0cAxsbhcumIo261110.shtml",
+   "gist": "特朗普称伊朗战事已“事实上结束”"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "新一轮俄美乌三方会谈在阿布扎比举行",
+   "url": "https://tv.cctv.com/2026/11/10/VIDESRFNSBS5Fb4snYSte9l7261110.shtml",
+   "gist": "新一轮俄美乌三方会谈在阿布扎比举行"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "科技教育",
+   "title": "关注实验室智能化 黑灯实验室成前沿领域新型基础设施 激发产业创新活力",
+   "url": "https://tv.cctv.com/2026/11/10/VIDE3MWWE5Ee5IpnP2qSMo1m261110.shtml",
+   "gist": "关注实验室智能化：黑灯实验室成前沿领域新型基础设施，激发产业创新活力"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "科技教育",
+   "title": "关注实验室智能化 从“试配方”到“算配方” 开辟智能科研新赛道",
+   "url": "https://tv.cctv.com/2026/11/10/VIDESztRLvjW2dznGOu1TTOZ261110.shtml",
+   "gist": "关注实验室智能化：从“试配方”到“算配方”，开辟智能科研新赛道"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "老街老厂的新账本 天津：修旧如旧 让红砖肌理留住工业记忆",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEy5y2naW2ZsGfZGMUXZas261110.shtml",
+   "gist": "老街老厂的新账本·天津：修旧如旧，让红砖肌理留住工业记忆"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "老街老厂的新账本 天津：红砖古树守根脉 老厂“织”出新消费",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEyJQTJ2hbLnJTdsZI1XyD261110.shtml",
+   "gist": "老街老厂的新账本·天津：红砖古树守根脉，老厂“织”出新消费"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "广州优化公积金提取政策 拓宽公积金使用范围",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEpMqbEnMLlkP5fRaSVUF6261110.shtml",
+   "gist": "广州优化公积金提取政策，拓宽公积金使用范围"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "山东济宁：医保打包付费 激活分级诊疗内生动力",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEhREMFH0j2TZVtYGYfOTp261110.shtml",
+   "gist": "山东济宁：医保打包付费，激活分级诊疗内生动力"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "山东济宁：慢病双备案机制 便利患者康复治疗转回基层",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEGvJRTSVEG7RMYvsQCBP1261110.shtml",
+   "gist": "山东济宁：慢病双备案机制，便利患者康复治疗转回基层"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "山东济宁：搭建四级一体化心电一张网 打通转诊堵点",
+   "url": "https://tv.cctv.com/2026/11/10/VIDE0JFCBAeaLGUKvUQA2uV9261110.shtml",
+   "gist": "山东济宁：搭建四级一体化心电一张网，打通转诊堵点"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "多项医疗卫生工程布局“十五五” 补齐就医服务短板",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEKxlMYFl95pKBsqFN9rdA261110.shtml",
+   "gist": "多项医疗卫生工程布局“十五五”，补齐就医服务短板"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "社会民生",
+   "title": "“十五五”时期我国将扩大养老托育优质资源供给",
+   "url": "https://tv.cctv.com/2026/11/10/VIDE7OcwZS1u9SfAOGZTFUnf261110.shtml",
+   "gist": "“十五五”时期我国将扩大养老托育优质资源供给"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "社会民生",
+   "title": "“十五五”时期我国将促进重要民生商品价格合理运行",
+   "url": "https://tv.cctv.com/2026/11/10/VIDELeCi9jKIS6hmacv5D1DU261110.shtml",
+   "gist": "“十五五”时期我国将促进重要民生商品价格合理运行"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "直通进博会 从“四叶草”出发 下一站APEC",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEijxi4QZ9Y8OA1k51SyZ6261110.shtml",
+   "gist": "直通进博会：从“四叶草”出发，下一站APEC"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "直通进博会 “一站式买全球” 公众开放日最后一天观众“扫货”忙",
+   "url": "https://tv.cctv.com/2026/11/10/VIDERmLgA6pBsBf774DfYWxa261110.shtml",
+   "gist": "直通进博会：“一站式买全球”，公众开放日最后一天观众“扫货”忙"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "直通进博会 第九届中国国际进口博览会今天闭幕 五项核心数据创历史新高",
+   "url": "https://tv.cctv.com/2026/11/10/VIDETIheLqd4xHMnGsVLKuyn261110.shtml",
+   "gist": "直通进博会：第九届中国国际进口博览会11月10日闭幕，五项核心数据创历史新高"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "稍后播出《央视财经评论》：同比增长20% 我国外贸活力持续彰显",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEGDB8PV9BIZWjPGmfSyUZ261110.shtml",
+   "gist": "稍后播出《央视财经评论》：同比增长20%，我国外贸活力持续彰显"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "我国出口产品更趋智能化 绿色化 高端化",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEgExps6NsXoopMNiqq1nN261110.shtml",
+   "gist": "我国出口产品更趋智能化、绿色化、高端化"
+  },
+  {
+   "date": "2026-11-10",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "前10个月我国货物贸易进出口总值同比增长20%",
+   "url": "https://tv.cctv.com/2026/11/10/VIDEnej0X4ImURboM80Khwaz261110.shtml",
+   "gist": "前10个月我国货物贸易进出口总值同比增长20%"
   }
  ]
 }
