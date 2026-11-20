@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19 21:42:34",
+ "updated_at": "2026-11-20 21:24:45",
  "sources": {
   "xwlb": "新闻联播",
   "jjxxll": "央视财经 · 经济信息联播"
@@ -41628,6 +41628,414 @@
    "title": "亚太经合组织第三十三次领导人非正式会议 习近平主席发表重要讲话 引发热烈反响",
    "url": "https://tv.cctv.com/2026/11/19/VIDEd1lGPkGisecYIZz3cEIx261119.shtml",
    "gist": "亚太经合组织第三十三次领导人非正式会议：习近平主席发表重要讲话，引发热烈反响"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "习近平会见印度尼西亚总统",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEgft2MM1q6MDFk4gWFLoi261120.shtml",
+   "gist": "11月20日上午，国家主席习近平在深圳会见来华出席亚太经合组织领导人非正式会议的印度尼西亚总统普拉博沃，两国元首共同宣布启动两国全面经济伙伴关系协定谈判。"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "习近平会见澳大利亚总理",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEiGAnSc6KqIeDYPTcybys261120.shtml",
+   "gist": "11月20日上午，国家主席习近平在深圳会见来华出席亚太经合组织领导人非正式会议的澳大利亚总理阿尔巴尼斯。"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "习近平会见新加坡总理",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEzbwL6LBWTdKXq7hPbigB261120.shtml",
+   "gist": "11月20日上午，国家主席习近平在深圳会见来华出席亚太经合组织领导人非正式会议的新加坡总理黄循财。"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "习近平会见泰国总理",
+   "url": "https://tv.cctv.com/2026/11/20/VIDE40qLMB09dHSVmkKvuL7y261120.shtml",
+   "gist": "11月20日上午，国家主席习近平在深圳会见来华出席亚太经合组织领导人非正式会议的泰国总理阿努廷。"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "习近平会见马来西亚总理",
+   "url": "https://tv.cctv.com/2026/11/20/VIDELudi9VCkIgK9GR7CDjZk261120.shtml",
+   "gist": "11月20日中午，国家主席习近平在深圳会见来华出席亚太经合组织领导人非正式会议的马来西亚总理安瓦尔。"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "李强同澳大利亚总理举行第十一轮中澳总理年度会晤",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEUoswLbWhceWdvjaiLMpU261120.shtml",
+   "gist": "国务院总理李强20日下午在京同澳大利亚总理阿尔巴尼斯举行第十一轮中澳总理年度会晤。"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "赵乐际会见澳大利亚总理",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEXcLcHiflj9zgb5KBnsOv261120.shtml",
+   "gist": "全国人大常委会委员长赵乐际20日下午在北京会见澳大利亚总理阿尔巴尼斯。"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "丁薛祥将访问新加坡并主持中新双边合作机制会议",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEAnHbzTm20Tbs60BuD5Gw261120.shtml",
+   "gist": "应新加坡副总理颜金勇邀请，中共中央政治局常委、国务院副总理丁薛祥将于11月22日至23日访问新加坡，同颜金勇副总理共同主持中新双边合作联委会第二十二次会议、中新…"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "第三届兰花奖颁奖典礼在京举行",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEJGRLSG3QAD7Q4vcwoDsb261120.shtml",
+   "gist": "11月20日，第三届兰花奖颁奖典礼在京举行。"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "国内联播快讯",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEGL4QDhiUs6yVr7FCvHwC261120.shtml",
+   "gist": "财政部成功在香港发行美元主权债券  记者从财政部了解到，财政部在香港成功发行20亿美元3年期主权债券，利率4.821%，认购金额达723亿美元，为发行额的36倍…"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "时政要闻",
+   "title": "推动亚太合作迈出新步伐 开创新局面——国际社会高度评价习近平主席重要讲话",
+   "url": "https://tv.cctv.com/2026/11/20/VIDE98gUPKcE9N0uYRxrT915261120.shtml",
+   "gist": "国际人士表示，习近平主席在亚太经合组织工商领导人峰会上的主旨演讲，以及在亚太经合组织第三十三次领导人非正式会议上发表的重要讲话，围绕建设亚太共同体提出中国主张和…"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "国际人士表示中俄美元首会晤为世界和平与稳定注入信心和动力",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEGW0A4OaVWgCG4NN7uTJd261120.shtml",
+   "gist": "国际人士表示，中俄美元首会晤是一次历史性的会晤，为大国协调互动构建了新范式，为世界和平与稳定注入信心和动力。"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "xwlb",
+   "category": "国际新闻",
+   "title": "国际联播快讯",
+   "url": "https://tv.cctv.com/2026/11/20/VIDElQu6FS8Ljg7rOfUJq2yg261120.shtml",
+   "gist": "日本民众集会反对高市政府扩军修宪动向  19日，约13000名日本民众在位于东京的日本国会议事堂前举行抗议集会，反对高市政府企图推动修宪、解禁杀伤性武器出口等举…"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "奥地利：茜茜公主博物馆重新开放",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEbzid46JK6KrmrCXNar5a261120.shtml",
+   "gist": "奥地利：茜茜公主博物馆重新开放"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "法国博若莱新酒上市",
+   "url": "https://tv.cctv.com/2026/11/20/VIDE5wE0WJNQMr6Ctg4lu6yZ261120.shtml",
+   "gist": "法国博若莱新酒上市"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "历经近50年 “旅行者一号”飞离地球一光日",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEK6gc5rjk3Sf8Jk4PFztU261120.shtml",
+   "gist": "历经近50年，“旅行者一号”飞离地球一光日"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "塞内加尔海域一移民船倾覆 至少4人死亡",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEdQHe2BWEP483qUw87udP261120.shtml",
+   "gist": "塞内加尔海域一移民船倾覆，至少4人死亡"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "吉林省吉林市：入冬后首现大面积雾凇景观",
+   "url": "https://tv.cctv.com/2026/11/20/VIDElbPyFz09SsVFev4YB7Iw261120.shtml",
+   "gist": "吉林省吉林市：入冬后首现大面积雾凇景观"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "我国发现距今39.5亿年亚洲最古老岩石",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEivK52TkOOj7op3J2PuLF261120.shtml",
+   "gist": "我国发现距今39.5亿年亚洲最古老岩石"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "川滇金沙江特大桥今天完工",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEHRNuRVOQUcXpPeU2Bivc261120.shtml",
+   "gist": "川滇金沙江特大桥11月20日完工"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "截至10月底 我国电动汽车充电基础设施超2500万个",
+   "url": "https://tv.cctv.com/2026/11/20/VIDExs8Xwc9cjj50o039E9HW261120.shtml",
+   "gist": "截至10月底，我国电动汽车充电基础设施超2500万个"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "财政部成功在香港发行美元主权债券",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEMMZ77y5f4LrTokRiXQDG261120.shtml",
+   "gist": "财政部成功在香港发行美元主权债券"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "强厄尔尼诺对美国影响预计持续至明年初",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEsbBAiXZB7SQkgGNJgOnk261120.shtml",
+   "gist": "强厄尔尼诺对美国影响预计持续至2027年初"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "记者观察：英国“脱欧”公投10年 为何重新向欧盟靠拢",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEdgiRzKYNIwlwu8kPShcN261120.shtml",
+   "gist": "记者观察：英国“脱欧”公投10年，为何重新向欧盟靠拢？"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "法国10月骚乱造成财产损失超2亿欧元",
+   "url": "https://tv.cctv.com/2026/11/20/VIDE1GJsnS5i3xoKDd5jMWJq261120.shtml",
+   "gist": "法国10月骚乱造成财产损失超2亿欧元"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "日本10月核心CPI同比上涨2.2% 为2025年12月以来最大涨幅",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEDSmXgK18kf57CP8ZvChu261120.shtml",
+   "gist": "日本10月核心CPI同比上涨2.2%，为2025年12月以来最大涨幅"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "为保能源安全 欧盟推迟“限甲烷排放”法规生效",
+   "url": "https://tv.cctv.com/2026/11/20/VIDET5rdBSR1Fd4yeNntJQpa261120.shtml",
+   "gist": "为保能源安全，欧盟推迟“限甲烷排放”法规生效"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "关注中东局势 国际能源署报告称：中东冲突或重塑全球能源格局",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEOFCLt1a7OCJP4DheR5TP261120.shtml",
+   "gist": "关注中东局势·国际能源署报告称：中东冲突或重塑全球能源格局"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "国际新闻",
+   "title": "关注中东局势 胡塞武装称袭击沙特利雅得金融中心等目标",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEAXY1H0RaVnMpUJFKDJGP261120.shtml",
+   "gist": "关注中东局势：胡塞武装称袭击沙特利雅得金融中心等目标"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "全球印制电路板持续短缺 AI和电子产业发展可能受波及",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEJQLXi8CdGJHYl5wC5yQu261120.shtml",
+   "gist": "全球印制电路板持续短缺，AI和电子产业发展可能受波及"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "关注Anthropic上市 按量付费与用户订阅 大模型面临商业化路线之争",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEac6lBOGPQe5rcYYLXriv261120.shtml",
+   "gist": "关注Anthropic上市：按量付费与用户订阅，大模型面临商业化路线之争"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "关注Anthropic上市 Anthropic19日登陆纳斯达克 成为史上最大IPO",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEhSW1wn6KgZiS8YHTlQ5t261120.shtml",
+   "gist": "关注Anthropic上市：Anthropic19日登陆纳斯达克，成为史上最大IPO"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "就业新趋势 AI赋能产业升级 拓展就业新空间",
+   "url": "https://tv.cctv.com/2026/11/20/VIDE3x6WwEOWRpPuM6yKRe72261120.shtml",
+   "gist": "就业新趋势：AI赋能产业升级，拓展就业新空间"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "就业新趋势 AI岗位扩容 企业选人青睐实战型人才",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEm3xLfmOPgrCiS8eIYYV6261120.shtml",
+   "gist": "就业新趋势：AI岗位扩容，企业选人青睐实战型人才"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "四川成都：跟着电影去旅行 首辆电影主题巴士上线",
+   "url": "https://tv.cctv.com/2026/11/20/VIDE665yjF4YLvbjNBJdOfwO261120.shtml",
+   "gist": "四川成都：跟着电影去旅行，首辆电影主题巴士上线"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "冰雪消费热 南方客源持续增长 多重利好激发冰雪消费活力",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEYQg0qXOXiU68m6W575nu261120.shtml",
+   "gist": "冰雪消费热：南方客源持续增长，多重利好激发冰雪消费活力"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "冰雪消费热 广东深圳：中外游客交织 前海冰雪世界人气十足",
+   "url": "https://tv.cctv.com/2026/11/20/VIDE9xXAesBJJAKZNCcQW0kO261120.shtml",
+   "gist": "冰雪消费热·广东深圳：中外游客交织，前海冰雪世界人气十足"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "冰雪消费热 新疆青河：青格里狼山雪场开板 新雪季如约而至",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEJbfVrQQ5dHaRDEAXlF1Q261120.shtml",
+   "gist": "冰雪消费热·新疆青河：青格里狼山雪场开板，新雪季如约而至"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "冰雪消费热 黑龙江哈尔滨：冰雪大世界启动造雪 冰雪旅游持续升温",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEIr8Hlttu3RmAGjtzNlEF261120.shtml",
+   "gist": "冰雪消费热·黑龙江哈尔滨：冰雪大世界启动造雪，冰雪旅游持续升温"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "冰雪消费热 吉林通化：万峰新雪季开板迎客 服务上新体验升级",
+   "url": "https://tv.cctv.com/2026/11/20/VIDE1ksV4dc3zXQlK6TS7TWn261120.shtml",
+   "gist": "冰雪消费热·吉林通化：万峰新雪季开板迎客， 服务上新体验升级"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "国际金价创一年多来新低 上海商圈迎黄金饰品消费热潮",
+   "url": "https://tv.cctv.com/2026/11/20/VIDESdLnqsCwWly89bCllc8O261120.shtml",
+   "gist": "国际金价创一年多来新低，上海商圈迎黄金饰品消费热潮"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "两部门联合公布4起编造传播资本市场虚假信息典型案例",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEGptKPpS2SsMC97CRmCMX261120.shtml",
+   "gist": "两部门联合公布4起编造传播资本市场虚假信息典型案例"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "金融市场",
+   "title": "本周已有116家A股公司披露股份回购计划或进展",
+   "url": "https://tv.cctv.com/2026/11/20/VIDE5QjyzG0XOA9Cb7y9H9MZ261120.shtml",
+   "gist": "本周已有116家A股公司披露股份回购计划或进展"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "问鼎戈登·贝尔奖 曙光8000实现超算应用新突破",
+   "url": "https://tv.cctv.com/2026/11/20/VIDERORG13vLTxziB2f2yxY1261120.shtml",
+   "gist": "问鼎戈登·贝尔奖，曙光8000实现超算应用新突破"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "科技教育",
+   "title": "独家探访：回收火箭发动机如何再次使用？",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEt6WLgI36lpeBxzSLX2GD261120.shtml",
+   "gist": "独家探访：回收火箭发动机如何再次使用？"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "朱雀三号9台回收发动机全部完成验收试车",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEu9vTggJDNYGegQ2YHAd3261120.shtml",
+   "gist": "朱雀三号9台回收发动机全部完成验收试车"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "2026版海洋产业投融资《指导目录》印发",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEPiUonqpG0oIgOoenHdpp261120.shtml",
+   "gist": "2026版海洋产业投融资《指导目录》印发"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "经济财经",
+   "title": "国家邮政局：前10月我国邮政行业寄递量同比增长3.3%",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEjVE1EhGDG6bk8Jze0e33261120.shtml",
+   "gist": "国家邮政局：前10月我国邮政行业寄递量同比增长3.3%"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "稍后播出《央视财经评论》：领航级智能工厂扩容 智能制造迈向新高度",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEQopdpXPgNVNu0di5F3z2261120.shtml",
+   "gist": "稍后播出《央视财经评论》：领航级智能工厂扩容，智能制造迈向新高度"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "科技教育",
+   "title": "我国开源生态加速建设 新一批人工智能等开源项目完成捐赠",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEZqvVwXJhCYSHB72wsKjM261120.shtml",
+   "gist": "我国开源生态加速建设，新一批人工智能等开源项目完成捐赠"
+  },
+  {
+   "date": "2026-11-20",
+   "source": "jjxxll",
+   "category": "其他",
+   "title": "国家智能制造专家委员会：我国智能制造整体迈入世界前列",
+   "url": "https://tv.cctv.com/2026/11/20/VIDEBuVKqRUWoE6YIKo0uBg7261120.shtml",
+   "gist": "国家智能制造专家委员会：我国智能制造整体迈入世界前列"
   }
  ]
 }
